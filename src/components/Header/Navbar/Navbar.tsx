@@ -8,8 +8,8 @@ function Navbar(): JSX.Element {
     <StyledHeader data-name="styled-header">
       {links.map((link) => {
         return (
-          <StyledLink data-name="styled-link" key={link}>
-            <Link to="">{link}</Link>
+          <StyledLink data-name="styled-link" key={link.name}>
+            <Link to={link.path}>{link.name}</Link>
           </StyledLink>
         );
       })}
