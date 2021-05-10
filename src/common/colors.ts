@@ -5,4 +5,6 @@ export const colors = {
   darkGreen: '#1f7d63',
   minorGreen: '#279b7a',
   white: '#ffffff',
-}
+  trolleyGrey: '#808080',
+  chineseSilver: '#cccccc',
+};
