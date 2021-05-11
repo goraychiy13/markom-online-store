@@ -1,9 +1,9 @@
 import { memo } from 'react';
-import Logo, { StyledSearchbar } from './style';
-import Button from '../../uikit/Button';
-import { colors } from '../../../common/colors';
 import { useHistory } from 'react-router';
+import { colors } from '../../../common/colors';
 import { Page, paths } from '../../../core/constants';
+import Button from '../../uikit/Button';
+import Logo, { StyledSearchbar } from './style';
 
 function Searchbar(): JSX.Element {
   const history = useHistory();
@@ -22,6 +22,7 @@ function Searchbar(): JSX.Element {
         iconWidth={'30px'}
         iconHeight={'30px'}
         backgroundColor={colors.darkGreen}
+        colorModifier={colors.minorGreen}
         iconMargin={'0 12px 0 0'}
       >
         Каталог

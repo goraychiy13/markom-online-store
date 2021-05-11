@@ -1,11 +1,10 @@
-import { colors } from '../../../common/colors';
 import styled from 'styled-components';
+import { colors } from '../../../common/colors';
 
 export const StyledButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 4px 0;
   font-family: 'Fira Sans';
   font-size: 16px;
   font-weight: bold;
@@ -15,9 +14,11 @@ export const StyledButton = styled.button`
   outline: none;
   transition: all 0.3s ease;
   box-shadow: none;
-  ${({ width }) => `width: ${width}`};
   ${({ height }) => `height: ${height}`};
+  ${({ width }) => `width: ${width}`};
+  ${({ maxWidth }) => `max-width: ${maxWidth}`};
   ${({ margin }) => `margin: ${margin}`};
+  ${({ padding }) => `padding: ${padding}`};
   ${({ backgroundColor }) => `background-color: ${backgroundColor}`};
   ${({ color }) => `color: ${color || colors.white}`};
   ${({ textDecoration }) => `text-decoration: ${textDecoration}`};

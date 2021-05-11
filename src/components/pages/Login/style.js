@@ -22,8 +22,10 @@ export const LoginForm = styled.div`
 `;
 
 export const LoginRow = styled.div`
-  &:last-child {
-    margin-top: 1rem;
+  margin-top: 1rem;
+
+  &:first-child {
+    margin-top: 0rem;
   }
 `;
 

@@ -4,9 +4,12 @@ import Icon from '../Icon';
 import { StyledButton } from './style';
 
 type Props = {
+  onClick?: void;
   height: string;
   width?: string;
+  maxWidth?: string;
   margin?: string;
+  padding?: string;
   backgroundColor: string;
   colorModifier?: string;
   textDecoration?: string;
@@ -24,7 +27,9 @@ function Button(props: Props): JSX.Element {
     <StyledButton
       height={props.height}
       width={props.width}
+      maxWidth={props.maxWidth}
       margin={props.margin}
+      padding={props.padding}
       backgroundColor={props.backgroundColor}
       colorModifier={props.colorModifier}
       color={props.color}
