@@ -5,7 +5,7 @@ import { StyledButton } from './style';
 
 type Props = {
   onClick?: void;
-  height: string;
+  height?: string;
   width?: string;
   maxWidth?: string;
   margin?: string;

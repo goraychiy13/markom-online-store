@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 import { colors } from '../../../common/colors';
 
-export const LoginWrapper = styled.div`
+export const AuthWrapper = styled.div`
   margin: 0 auto;
   padding: 0 40px;
 `;
 
-export const LoginHeader = styled.h1`
+export const AuthHeader = styled.h1`
   margin: 0;
   padding: 1rem 0;
   font-family: 'Fira Sans';
@@ -15,13 +15,13 @@ export const LoginHeader = styled.h1`
   color: ${colors.darkGrey};
 `;
 
-export const LoginForm = styled.div`
+export const AuthForm = styled.div`
   padding: 1rem 0;
   display: grid;
   grid-template-columns: 0.5fr;
 `;
 
-export const LoginRow = styled.div`
+export const AuthRow = styled.div`
   margin-top: 1rem;
 
   &:first-child {
@@ -29,7 +29,7 @@ export const LoginRow = styled.div`
   }
 `;
 
-export const LoginLabel = styled.div`
+export const AuthLabel = styled.div`
   margin-bottom: 0.5em;
   font-family: 'Fira Sans';
   font-size: 16px;
@@ -41,12 +41,29 @@ export const LoginLabel = styled.div`
     font-size: 0.9em;
     margin-left: 0.2em;
     line-height: 0.7em;
-    content: '*';
     color: red;
+    ${({ hasContent }) => !hasContent && `content: '*'`}
   }
 `;
 
-export const LoginButtons = styled.div`
+export const AuthSelectWrapper = styled.div`
+  position: relative;
+
+  &::after {
+    content: '▼';
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 10px;
+    top: 9px;
+    opacity: 0.8;
+    pointer-events: none;
+    color: ${colors.grey};
+  }
+`;
+
+export const AuthButtons = styled.div`
   padding-top: 1rem;
   display: flex;
 `;

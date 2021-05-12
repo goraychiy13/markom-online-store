@@ -3,8 +3,8 @@ import { StyledInput } from './style';
 
 type Props = {};
 
-const Input: React.FC<Props> = (props: any): JSX.Element => {
-  return <StyledInput />;
+const Input: React.FC<Props> = () => {
+  return <StyledInput data-name="styled-input" />;
 };
 
 export default memo(Input);

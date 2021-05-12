@@ -10,3 +10,8 @@ export type TypeLoginPage = {
     name: string;
   }[];
 };
+
+export type TypeSelectOptions = {
+  type: string;
+  value: string;
+};

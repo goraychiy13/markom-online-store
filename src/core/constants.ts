@@ -1,13 +1,13 @@
 export enum Page {
   HOME = 'HOME',
   LOGIN = 'LOGIN',
-  PASSWORD_CHANGE = 'PASSWORD_CHANGE',
-  CONTACTS_NEW = 'CONTACTS_NEW',
+  FORGOTTEN_PASSWORD = 'FORGOTTEN_PASSWORD',
+  SIGN_UP = 'SIGN_UP',
 }
 
 export const paths = {
-  [Page.LOGIN]: '/client_account/login',
-  [Page.PASSWORD_CHANGE]: '/client_account/password/change',
-  [Page.CONTACTS_NEW]: '/client_account/contacts/new',
+  [Page.LOGIN]: '/auth/login',
+  [Page.FORGOTTEN_PASSWORD]: '/auth/forgotten_password',
+  [Page.SIGN_UP]: '/auth/sign_up',
   [Page.HOME]: '/',
 };
