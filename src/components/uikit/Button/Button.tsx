@@ -28,6 +28,7 @@ type Props = {
 function Button(props: Props): JSX.Element {
   return (
     <StyledButton
+      data-name="styled-button"
       height={props.height}
       width={props.width}
       maxWidth={props.maxWidth}
@@ -38,15 +39,14 @@ function Button(props: Props): JSX.Element {
       color={props.color}
       textDecoration={props.textDecoration}
       fontWeight={props.fontWeight}
-      data-name="styled-button"
       borderRadius={props.borderRadius}
       type={props.type}
     >
       {props.hasIcon && props.icon && (
         <Icon
+          title="Button"
           path={props.icon.path}
           viewBox={props.icon.viewBox}
-          title="Button"
           width={props.iconWidth}
           height={props.iconHeight}
           margin={props.iconMargin}
