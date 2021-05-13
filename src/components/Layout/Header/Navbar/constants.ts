@@ -2,23 +2,23 @@ import { Page, paths } from '../../../../core/routes/constants';
 
 export const links = [
   {
-    path: '/catalog',
+    path: paths[Page.CATALOG],
     name: 'Каталог'
   },
   {
-    path: '/about-company',
+    path: paths[Page.ABOUT_COMPANY],
     name: 'О компании'
   },
   {
-    path: '/contacts',
+    path: paths[Page.CONTACTS],
     name: 'Контакты'
   },
   {
-    path: '/delivery',
+    path: paths[Page.DELIVERY],
     name: 'Доставка'
   },
   {
-    path: '/payment',
+    path: paths[Page.PAYMENT],
     name: 'Оплата'
   },
   {
@@ -26,7 +26,7 @@ export const links = [
     name: 'Личный кабинет'
   },
   {
-    path: '/blog',
+    path: paths[Page.BLOG],
     name: 'Блог'
   }
 ];

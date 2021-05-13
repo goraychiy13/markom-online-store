@@ -6,7 +6,6 @@ export const StyledSearchbar = styled.ul`
   padding-left: 0;
   max-width: 1408px;
   align-items: center;
-  margin: 20px;
   margin-top: 63.5px;
 `;
 
