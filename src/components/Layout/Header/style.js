@@ -13,6 +13,9 @@ export const NavbarWrapper = styled.div`
   align-items: center;
   justify-content: center;
   font: 16px 'Fira Sans';
+  position: absolute;
+  left: 0;
+  min-width: 100%;
 `;
 
 export const NavbarContent = styled.div`

@@ -1,5 +1,5 @@
+import { TypeIcon } from '../../../icons/types';
 import { memo } from 'react';
-import { menuIcon } from '../../../icons';
 import Icon from '../Icon';
 import { StyledButton } from './style';
 
@@ -11,6 +11,7 @@ type Props = {
   margin?: string;
   padding?: string;
   backgroundColor: string;
+  borderRadius?: string;
   colorModifier?: string;
   textDecoration?: string;
   fontWeight?: string;
@@ -20,6 +21,8 @@ type Props = {
   iconWidth?: string;
   iconHeight?: string;
   iconMargin?: string;
+  icon?: TypeIcon;
+  type?: string;
 };
 
 function Button(props: Props): JSX.Element {
@@ -36,11 +39,13 @@ function Button(props: Props): JSX.Element {
       textDecoration={props.textDecoration}
       fontWeight={props.fontWeight}
       data-name="styled-button"
+      borderRadius={props.borderRadius}
+      type={props.type}
     >
-      {props.hasIcon && (
+      {props.hasIcon && props.icon && (
         <Icon
-          path={menuIcon.path}
-          viewBox={menuIcon.viewBox}
+          path={props.icon.path}
+          viewBox={props.icon.viewBox}
           title="Button"
           width={props.iconWidth}
           height={props.iconHeight}

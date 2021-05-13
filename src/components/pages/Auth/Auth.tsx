@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { colors } from '../../../common/colors';
-import { Page, paths } from '../../../core/constants';
+import { Page, paths } from '../../../core/routes/constants';
 import Button from '../../uikit/Button';
 import Input from '../../uikit/Input';
 import Select from '../../uikit/Select';

@@ -7,4 +7,5 @@ export const colors = {
   white: '#ffffff',
   trolleyGrey: '#808080',
   chineseSilver: '#cccccc',
+  darkOrange: '#ff4100',
 };
