@@ -1,5 +1,5 @@
-import Auth from '../components/pages/Auth';
-import Home from '../components/pages/Home';
+import Auth from '../../components/pages/Auth';
+import Home from '../../components/pages/Home';
 import { Page, paths } from './constants';
 import { TypeRoute } from './type';
 

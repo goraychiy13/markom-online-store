@@ -1,4 +1,4 @@
-import { Page, paths } from '../../../core/constants';
+import { Page, paths } from '../../../../core/routes/constants';
 
 export const links = [
   {

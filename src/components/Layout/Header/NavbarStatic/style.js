@@ -1,4 +1,4 @@
-import { colors } from '../../../common/colors';
+import { colors } from '../../../../common/colors';
 import styled from 'styled-components';
 
 export const Static = styled.div`

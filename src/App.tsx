@@ -1,7 +1,7 @@
-import Header from './components/Header';
+import Header from './components/Layout/Header';
 import { memo } from 'react';
 import { BrowserRouter as Router, Switch } from 'react-router-dom';
-import AppRoutes from './core/AppRoutes';
+import AppRoutes from './core/routes/AppRoutes';
 
 function App(): JSX.Element {
   return (

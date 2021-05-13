@@ -11,7 +11,7 @@ export const StyledInput = styled.input`
   color: ${colors.darkGrey};
   background: ${colors.white};
   border: 1px solid ${colors.trolleyGrey};
-  border-radius: 6px;
+  ${({ borderRadius }) => `border-radius: ${borderRadius ? borderRadius : '6px'}`};
   outline: none;
   vertical-align: middle;
 
@@ -19,5 +19,10 @@ export const StyledInput = styled.input`
     transition: 0.15s ease-in-out;
     box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.05);
     border-color: ${colors.chineseSilver};
+  }
+
+  &::placeholder {
+    color: #999999;
+    opacity: 0.3;
   }
 `;
