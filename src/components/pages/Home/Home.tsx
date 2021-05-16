@@ -1,5 +1,11 @@
 import { memo } from 'react';
-import { HomeWrapper, CarouselTitle, CarouselItem, ProductCardsWrapper, NewArrivalTitle } from './style';
+import {
+  HomeWrapper,
+  CarouselTitle,
+  CarouselItem,
+  ProductCardsWrapper,
+  NewArrivalTitle,
+} from './style';
 import { Carousel } from 'react-responsive-carousel';
 import ProductCard from '../../modules/ProductCard';
 import { productCardInfo } from './constants';
@@ -10,11 +16,17 @@ const Home = (props: any): JSX.Element => {
     <HomeWrapper>
       <Carousel showThumbs={false} showArrows>
         <CarouselItem>
-          <img src="https://static-sl.insales.ru/r/nlEYOkOZekE/fit/1408/0/ce/1/plain/files/1/2110/14641214/original/slider.jpg@webp" />
+          <img
+            src="https://static-sl.insales.ru/r/nlEYOkOZekE/fit/1408/0/ce/1/plain/files/1/2110/14641214/original/slider.jpg@webp"
+            alt="slide"
+          />
           <CarouselTitle>Премиум продукты высокого качества</CarouselTitle>
         </CarouselItem>
         <CarouselItem>
-          <img src="https://static-sl.insales.ru/r/nlEYOkOZekE/fit/1408/0/ce/1/plain/files/1/2110/14641214/original/slider.jpg@webp" />
+          <img
+            src="https://static-sl.insales.ru/r/nlEYOkOZekE/fit/1408/0/ce/1/plain/files/1/2110/14641214/original/slider.jpg@webp"
+            alt="slide"
+          />
           <CarouselTitle>Описание слайда 2</CarouselTitle>
         </CarouselItem>
       </Carousel>
