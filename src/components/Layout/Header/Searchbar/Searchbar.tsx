@@ -1,12 +1,10 @@
 import InputSearch from '../../../modules/InputSearch';
 import { memo } from 'react';
 import { useHistory } from 'react-router';
-import { colors } from '../../../../common/colors';
 import { Page, paths } from '../../../../core/routes/constants';
 import Button from '../../../uikit/Button';
-import Logo, { StyledSearchbar, IconWrapper, AmountProduct, TotalPuchase } from './style';
+import Logo, { StyledSearchbar, IconWrapper, AmountProduct, TotalPuchase, buttonStyles } from './style';
 import Icon from '../../../uikit/Icon';
-import { menuIcon } from '../../../../icons';
 import { userTools, userToolTitles } from './constants';
 
 function Searchbar(): JSX.Element {
@@ -42,18 +40,7 @@ function Searchbar(): JSX.Element {
   return (
     <StyledSearchbar data-name="styled-searchbar">
       <Logo onClick={goToHome} data-name="searchbar-logo" />
-      <Button
-        hasIcon
-        width={'128px'}
-        height={'50px'}
-        iconWidth={'30px'}
-        iconHeight={'30px'}
-        backgroundColor={colors.darkGreen}
-        colorModifier={colors.minorGreen}
-        iconMargin={'0 12px 0 0'}
-        icon={menuIcon}
-        type="button"
-      >
+      <Button {...buttonStyles}>
         Каталог
       </Button>
       <InputSearch />

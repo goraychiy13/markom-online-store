@@ -36,7 +36,9 @@ function CurrentPage(): JSX.Element {
     <StyledCurrentPage
       isDisplayed={
         location.pathname === paths[Page.LOGIN] ||
-        location.pathname === paths[Page.HOME]
+        location.pathname === paths[Page.HOME] ||
+        location.pathname === paths[Page.FORGOTTEN_PASSWORD] ||
+        location.pathname === paths[Page.SIGN_UP]
           ? false
           : true
       }

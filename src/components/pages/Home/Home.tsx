@@ -5,13 +5,16 @@ import {
   CarouselItem,
   ProductCardsWrapper,
   NewArrivalTitle,
+  BannerWrapper,
+  NewArrivalWrapper,
 } from './style';
 import { Carousel } from 'react-responsive-carousel';
 import ProductCard from '../../modules/ProductCard';
-import { productCardInfo } from './constants';
+import { bannersInfo, productCardInfo } from './constants';
+import Banner from '../../modules/Banner';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-const Home = (props: any): JSX.Element => {
+const Home = (): JSX.Element => {
   return (
     <HomeWrapper>
       <Carousel showThumbs={false} showArrows>
@@ -30,14 +33,19 @@ const Home = (props: any): JSX.Element => {
           <CarouselTitle>Описание слайда 2</CarouselTitle>
         </CarouselItem>
       </Carousel>
-      <div style={{ marginTop: 50 }}>
+      <NewArrivalWrapper>
         <NewArrivalTitle>Новое поступление</NewArrivalTitle>
         <ProductCardsWrapper>
           {productCardInfo.map((card) => {
             return <ProductCard key={card.id} {...card} />;
           })}
         </ProductCardsWrapper>
-      </div>
+      </NewArrivalWrapper>
+      <BannerWrapper>
+        {bannersInfo.map((banner) => {
+          return <Banner {...banner} />;
+        })}
+      </BannerWrapper>
     </HomeWrapper>
   );
 };

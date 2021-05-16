@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { colors } from '../../../common/colors';
+import { basketIcon } from '../../../icons/basketIcon';
 
 export const Container = styled.form`
   display: flex;
@@ -61,3 +62,19 @@ export const CardImage = styled.div`
   ${({ cardImage }) => `background-image: url(${cardImage})`};
 `
 
+export const buttonStyles = {
+  type: 'button',
+  hasIcon: true,
+  width: '200px',
+  height: '40px',
+  iconWidth: '19px',
+  iconHeight: '19px',
+  backgroundColor: colors.darkGreen,
+  colorModifier: colors.minorGreen,
+  iconMargin: '0 0 0 5px',
+  fontWeight: '400',
+  icon: basketIcon,
+  iconFill: colors.white,
+  isRowReversed: true,
+  margin: '10px 0 0 0',
+};
