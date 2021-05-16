@@ -1,50 +1,50 @@
 import { Page, paths } from '../../../core/routes/constants';
 
-const AUTH_PASSWORD = 'AUTH_PASSWORD';
-const AUTH_REGISTER = 'AUTH_REGISTER';
-const AUTH_EMAIL = 'AUTH_EMAIL';
-const AUTH_FULL_NAME = 'AUTH_FULL_NAME';
-const AUTH_CONTACT_TELEPHONE = 'AUTH_CONTACT_TELEPHONE';
-const AUTH_LANGUAGE = 'AUTH_LANGUAGE';
-const AUTH_REPEAT_PASSWORD = 'AUTH_REPEAT_PASSWORD';
-const AUTH_ALREADY_HAVE_ACCOUNT = 'AUTH_ALREADY_HAVE_ACCOUNT';
+const PASSWORD = 'PASSWORD';
+const REGISTER = 'REGISTER';
+const EMAIL = 'EMAIL';
+const FULL_NAME = 'FULL_NAME';
+const CONTACT_TELEPHONE = 'CONTACT_TELEPHONE';
+const LANGUAGE = 'LANGUAGE';
+const REPEAT_PASSWORD = 'REPEAT_PASSWORD';
+const ALREADY_HAVE_ACCOUNT = 'ALREADY_HAVE_ACCOUNT';
 
-export const authSignUp = {
+export const signUp = {
   pageTitle: 'Регистрация',
   inputNames: [
     {
-      type: AUTH_FULL_NAME,
+      type: FULL_NAME,
       name: 'Контактное лицо (ФИО)',
     },
     {
-      type: AUTH_CONTACT_TELEPHONE,
+      type: CONTACT_TELEPHONE,
       name: 'Контактный телефон',
     },
     {
-      type: AUTH_EMAIL,
+      type: EMAIL,
       name: 'Email',
     },
     {
-      type: AUTH_LANGUAGE,
+      type: LANGUAGE,
       name: 'Язык',
     },
     {
-      type: AUTH_PASSWORD,
+      type: PASSWORD,
       name: 'Пароль',
     },
     {
-      type: AUTH_REPEAT_PASSWORD,
+      type: REPEAT_PASSWORD,
       name: 'Повторите пароль',
     },
   ],
   buttons: [
     {
-      type: AUTH_REGISTER,
+      type: REGISTER,
       path: paths[Page.LOGIN],
       name: 'Зарегистрироваться',
     },
     {
-      type: AUTH_ALREADY_HAVE_ACCOUNT,
+      type: ALREADY_HAVE_ACCOUNT,
       path: paths[Page.LOGIN],
       name: 'У меня уже есть аккаунт',
     },

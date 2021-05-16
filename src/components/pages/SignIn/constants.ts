@@ -1,36 +1,36 @@
 import { Page, paths } from '../../../core/routes/constants';
 
-const AUTH_NAME = 'AUTH_NAME';
-const AUTH_PASSWORD = 'AUTH_PASSWORD';
-const AUTH_ENTER = 'AUTH_ENTER';
-const AUTH_FORGOTTEN_PASSWORD = 'AUTH_FORGOTTEN_PASSWORD';
-const AUTH_REGISTER = 'AUTH_REGISTER';
+const NAME = 'NAME';
+const PASSWORD = 'PASSWORD';
+const ENTER = 'ENTER';
+const FORGOTTEN_PASSWORD = 'FORGOTTEN_PASSWORD';
+const REGISTER = 'REGISTER';
 
-export const authSignIn = {
+export const signIn = {
   pageTitle: 'Вход в кабинет покупателя',
   inputNames: [
     {
-      type: AUTH_NAME,
+      type: NAME,
       name: 'Телефон или email',
     },
     {
-      type: AUTH_PASSWORD,
+      type: PASSWORD,
       name: 'Пароль',
     },
   ],
   buttons: [
     {
-      type: AUTH_ENTER,
+      type: ENTER,
       path: paths[Page.LOGIN],
       name: 'Войти',
     },
     {
-      type: AUTH_FORGOTTEN_PASSWORD,
+      type: FORGOTTEN_PASSWORD,
       path: paths[Page.FORGOTTEN_PASSWORD],
       name: 'Восстановить пароль',
     },
     {
-      type: AUTH_REGISTER,
+      type: REGISTER,
       path: paths[Page.SIGN_UP],
       name: 'Зарегистрироваться',
     },

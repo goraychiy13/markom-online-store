@@ -1,25 +1,25 @@
 import { Page, paths } from '../../../core/routes/constants';
 
-const AUTH_EMAIL = 'AUTH_EMAIL';
-const AUTH_RESTORE_PASSWORD = 'AUTH_RESTORE_PASSWORD';
-const AUTH_REMEMBERED_PASSWORD = 'AUTH_REMEMBERED_PASSWORD';
+const FORGOTTEN_PASSWORD_EMAIL = 'FORGOTTEN_PASSWORD_EMAIL';
+const RESTORE_PASSWORD = 'RESTORE_PASSWORD';
+const REMEMBER_PASSWORD = 'REMEMBER_PASSWORD';
 
-export const authForgottenPassword = {
+export const forgottenPassword = {
   pageTitle: 'Вход в кабинет покупателя',
   inputNames: [
     {
-      type: AUTH_EMAIL,
+      type: FORGOTTEN_PASSWORD_EMAIL,
       name: 'Email',
     },
   ],
   buttons: [
     {
-      type: AUTH_RESTORE_PASSWORD,
+      type: RESTORE_PASSWORD,
       path: paths[Page.LOGIN],
       name: 'Восстановить пароль',
     },
     {
-      type: AUTH_REMEMBERED_PASSWORD,
+      type: REMEMBER_PASSWORD,
       path: paths[Page.LOGIN],
       name: 'Я вспомнил(-а) пароль!',
     },

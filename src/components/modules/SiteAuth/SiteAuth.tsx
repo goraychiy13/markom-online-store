@@ -4,7 +4,7 @@ import { colors } from '../../../common/colors';
 import Button from '../../uikit/Button';
 import Input from '../../uikit/Input';
 import Select from '../../uikit/Select';
-import { AUTH_LANGUAGE, selectOptions } from './constants';
+import { LANGUAGE, selectOptions } from './constants';
 import {
   AuthButtons,
   AuthForm,
@@ -28,12 +28,12 @@ const SiteAuth: React.FC<Props> = (props) => {
         {props.page.inputNames.map((input) => (
           <AuthRow key={input.type} data-name="auth-row">
             <AuthLabel
-              hasContent={input.type === AUTH_LANGUAGE}
+              hasContent={input.type === LANGUAGE}
               data-name="auth-label"
             >
               {input.name}
             </AuthLabel>
-            {input.type === AUTH_LANGUAGE ? (
+            {input.type === LANGUAGE ? (
               <AuthSelectWrapper data-name="auth-select-wrapper">
                 <Select>
                   {selectOptions.map((option) => (
