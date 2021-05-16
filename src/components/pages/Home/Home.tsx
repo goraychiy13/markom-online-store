@@ -7,11 +7,31 @@ import {
   NewArrivalTitle,
   BannerWrapper,
   NewArrivalWrapper,
+  DrinksWrapper,
+  DrinksTitle,
+  NutstWrapper,
+  NutsTitle,
+  OurPluses,
+  OurPlusesWrapper,
+  OurPlusesTitle,
+  BrandsWrapper,
+  BrandsTitle,
+  Brands,
 } from './style';
 import { Carousel } from 'react-responsive-carousel';
 import ProductCard from '../../modules/ProductCard';
-import { bannersInfo, productCardInfo } from './constants';
+import {
+  bannersInfo,
+  productCardInfo,
+  drinksInfo,
+  nutsInfo,
+  productsCategory,
+  ourPlusesInfo,
+  brands,
+} from './constants';
 import Banner from '../../modules/Banner';
+import DesertBanner from './DesertBanner';
+import OurPlusesItem from './OurPlusesItem';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const Home = (): JSX.Element => {
@@ -34,18 +54,69 @@ const Home = (): JSX.Element => {
         </CarouselItem>
       </Carousel>
       <NewArrivalWrapper>
-        <NewArrivalTitle>Новое поступление</NewArrivalTitle>
+        <NewArrivalTitle>{productsCategory.newArrival}</NewArrivalTitle>
         <ProductCardsWrapper>
           {productCardInfo.map((card) => {
-            return <ProductCard key={card.id} {...card} />;
+            return (
+              <ProductCard
+                key={card.id}
+                {...card}
+                productCategory={productsCategory.newArrival}
+              />
+            );
           })}
         </ProductCardsWrapper>
       </NewArrivalWrapper>
       <BannerWrapper>
         {bannersInfo.map((banner) => {
-          return <Banner {...banner} />;
+          return <Banner key={banner.id} {...banner} />;
         })}
       </BannerWrapper>
+      <DesertBanner />
+      <DrinksWrapper>
+        <DrinksTitle>{productsCategory.drinks}</DrinksTitle>
+        <ProductCardsWrapper>
+          {drinksInfo.map((card) => {
+            return (
+              <ProductCard
+                key={card.id}
+                {...card}
+                productCategory={productsCategory.drinks}
+              />
+            );
+          })}
+        </ProductCardsWrapper>
+      </DrinksWrapper>
+      <NutstWrapper>
+        <NutsTitle>{productsCategory.nuts}</NutsTitle>
+        <ProductCardsWrapper>
+          {nutsInfo.map((card) => {
+            return (
+              <ProductCard
+                key={card.id}
+                {...card}
+                productCategory={productsCategory.nuts}
+              />
+            );
+          })}
+        </ProductCardsWrapper>
+      </NutstWrapper>
+      <OurPlusesWrapper>
+        <OurPlusesTitle>Наши плюсы</OurPlusesTitle>
+        <OurPluses>
+          {ourPlusesInfo.map((item) => {
+            return <OurPlusesItem key={item.id} {...item} />;
+          })}
+        </OurPluses>
+      </OurPlusesWrapper>
+      <BrandsWrapper>
+        <BrandsTitle>Бренды</BrandsTitle>
+        <Brands>
+          {brands.map((brand) => {
+            return <img width="210px" height="210px" src={brand.src} alt="" />;
+          })}
+        </Brands>
+      </BrandsWrapper>
     </HomeWrapper>
   );
 };
