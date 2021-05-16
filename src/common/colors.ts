@@ -8,4 +8,6 @@ export const colors = {
   trolleyGrey: '#808080',
   chineseSilver: '#cccccc',
   darkOrange: '#ff4100',
+  minorShade: '#f7f7f7',
+  darkRed: '#e44542',
 };

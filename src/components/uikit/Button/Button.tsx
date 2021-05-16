@@ -21,6 +21,8 @@ type Props = {
   iconWidth?: string;
   iconHeight?: string;
   iconMargin?: string;
+  iconFill?: string;
+  isRowReversed?: boolean;
   icon?: TypeIcon;
   type?: string;
 };
@@ -40,6 +42,7 @@ function Button(props: Props): JSX.Element {
       textDecoration={props.textDecoration}
       fontWeight={props.fontWeight}
       borderRadius={props.borderRadius}
+      isRowReversed={props.isRowReversed}
       type={props.type}
     >
       {props.hasIcon && props.icon && (
@@ -50,6 +53,7 @@ function Button(props: Props): JSX.Element {
           width={props.iconWidth}
           height={props.iconHeight}
           margin={props.iconMargin}
+          iconFill={props.iconFill}
         />
       )}
       <span>{props.children}</span>

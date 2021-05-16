@@ -1,7 +1,9 @@
 import { memo } from 'react';
-import { HomeWrapper, CarouselTitle, CarouselItem } from './style';
+import { HomeWrapper, CarouselTitle, CarouselItem, ProductCardsWrapper, NewArrivalTitle } from './style';
 import { Carousel } from 'react-responsive-carousel';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+import ProductCard from '../../modules/ProductCard';
+import { productCardInfo } from './constants';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const Home = (props: any): JSX.Element => {
   return (
@@ -17,8 +19,12 @@ const Home = (props: any): JSX.Element => {
         </CarouselItem>
       </Carousel>
       <div style={{ marginTop: 50 }}>
-        <div>Новое поступление</div>
-        <div></div>
+        <NewArrivalTitle>Новое поступление</NewArrivalTitle>
+        <ProductCardsWrapper>
+          {productCardInfo.map((card) => {
+            return <ProductCard key={card.id} {...card} />;
+          })}
+        </ProductCardsWrapper>
       </div>
     </HomeWrapper>
   );
