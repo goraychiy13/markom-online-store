@@ -18,6 +18,10 @@ export const CarouselTitle = styled.div`
   font-size: 48px;
   font-weight: bold;
 `
+export const NewArrivalWrapper = styled.div`
+  margin-top: 50px;
+  margin-bottom: 70px;
+`
 
 export const NewArrivalTitle = styled.h1`
   font-size: 32px;
@@ -27,4 +31,10 @@ export const NewArrivalTitle = styled.h1`
 
 export const ProductCardsWrapper = styled.div`
   display: flex;
+`
+
+export const BannerWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 `

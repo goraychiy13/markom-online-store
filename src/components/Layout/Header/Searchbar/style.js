@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { colors } from '../../../../common/colors';
+import { menuIcon } from '../../../../icons';
 
 export const StyledSearchbar = styled.ul`
   display: flex;
@@ -14,6 +15,7 @@ export default styled.div`
   width: 220px;
   height: 51px;
   background-size: contain;
+  background-repeat: no-repeat;
   margin-right: 50px;
   cursor: pointer;
 `;
@@ -48,3 +50,16 @@ export const TotalPuchase = styled.div`
   font-size: 18px;
   cursor: pointer;
 `
+
+export const buttonStyles = {
+  hasIcon: true,
+  width: '128px',
+  height: '50px',
+  iconWidth: '30px',
+  iconHeight: '30px',
+  backgroundColor: colors.darkGreen,
+  colorModifier: colors.minorGreen,
+  iconMargin: '0 12px 0 0',
+  icon: menuIcon,
+  type: "button",
+}
