@@ -1,9 +1,11 @@
 import AboutCompany from '../../components/pages/AboutCompany';
-import Auth from '../../components/pages/Auth';
 import Contacts from '../../components/pages/Contacts';
 import Delivery from '../../components/pages/Delivery';
+import ForgottenPassword from '../../components/pages/ForgottenPassword';
 import Home from '../../components/pages/Home';
 import Payment from '../../components/pages/Payment';
+import SignIn from '../../components/pages/SignIn';
+import SignUp from '../../components/pages/SignUp';
 import { Page, paths } from './constants';
 import { TypeRoute } from './type';
 
@@ -38,17 +40,17 @@ export function getRoutes(): TypeRoute[] {
     {
       type: Page.LOGIN,
       path: paths[Page.LOGIN],
-      component: <Auth />,
+      component: <SignIn />,
     },
     {
       type: Page.FORGOTTEN_PASSWORD,
       path: paths[Page.FORGOTTEN_PASSWORD],
-      component: <Auth />,
+      component: <ForgottenPassword />,
     },
     {
       type: Page.SIGN_UP,
       path: paths[Page.SIGN_UP],
-      component: <Auth />,
+      component: <SignUp />,
     },
   ];
 }
