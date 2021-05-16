@@ -1,17 +1,10 @@
 import { memo } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { colors } from '../../../common/colors';
-import { Page, paths } from '../../../core/routes/constants';
 import Button from '../../uikit/Button';
 import Input from '../../uikit/Input';
 import Select from '../../uikit/Select';
-import {
-  authForgotten,
-  authSignIn,
-  authSignUp,
-  AUTH_LANGUAGE,
-  selectOptions,
-} from './constants';
+import { LANGUAGE, selectOptions } from './constants';
 import {
   AuthButtons,
   AuthForm,
@@ -21,46 +14,31 @@ import {
   AuthSelectWrapper,
   AuthWrapper,
 } from './style';
-import { TypeLoginPage } from './types';
+import { TypeAuthPage } from './types';
 
-type Props = {};
+type Props = {
+  page: TypeAuthPage;
+};
 
-const Auth: React.FC<Props> = (props) => {
-  const location = useLocation();
-
-  const getLoginPage = (path: string): TypeLoginPage => {
-    if (path.includes(paths[Page.LOGIN])) {
-      return authSignIn;
-    }
-    if (path.includes(paths[Page.FORGOTTEN_PASSWORD])) {
-      return authForgotten;
-    }
-    if (path.includes(paths[Page.SIGN_UP])) {
-      return authSignUp;
-    }
-    return authSignIn;
-  };
-
+const SiteAuth: React.FC<Props> = (props) => {
   return (
     <AuthWrapper data-name="auth-wrapper">
-      <AuthHeader data-name="auth-header">
-        {getLoginPage(location.pathname).pageTitle}
-      </AuthHeader>
+      <AuthHeader data-name="auth-header">{props.page.pageTitle}</AuthHeader>
       <AuthForm data-name="auth-form">
-        {getLoginPage(location.pathname).inputNames.map((input) => (
+        {props.page.inputNames.map((input) => (
           <AuthRow key={input.type} data-name="auth-row">
             <AuthLabel
-              hasContent={input.type === AUTH_LANGUAGE}
+              hasContent={input.type === LANGUAGE}
               data-name="auth-label"
             >
               {input.name}
             </AuthLabel>
-            {input.type === AUTH_LANGUAGE ? (
+            {input.type === LANGUAGE ? (
               <AuthSelectWrapper data-name="auth-select-wrapper">
                 <Select>
-                  {selectOptions.map((opt) => (
-                    <option key={opt.type} value={opt.type}>
-                      {opt.value}
+                  {selectOptions.map((option) => (
+                    <option key={option.type} value={option.type}>
+                      {option.value}
                     </option>
                   ))}
                 </Select>
@@ -72,7 +50,7 @@ const Auth: React.FC<Props> = (props) => {
         ))}
       </AuthForm>
       <AuthButtons data-name="auth-buttons">
-        {getLoginPage(location.pathname).buttons.map((button, index) => (
+        {props.page.buttons.map((button, index) => (
           <Link
             key={button.type}
             to={button.path}
@@ -97,4 +75,4 @@ const Auth: React.FC<Props> = (props) => {
   );
 };
 
-export default memo(Auth);
+export default memo(SiteAuth);
