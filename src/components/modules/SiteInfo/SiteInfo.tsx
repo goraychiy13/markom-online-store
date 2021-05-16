@@ -16,7 +16,7 @@ type Props = {
   page: TypePage;
 };
 
-const Info: React.FC<Props> = (props) => {
+const SiteInfo: React.FC<Props> = (props) => {
   const getText = (tag: string, info: TypeInfo[]): JSX.Element => {
     switch (tag) {
       case TAG_UL:
@@ -110,4 +110,4 @@ const Info: React.FC<Props> = (props) => {
   );
 };
 
-export default memo(Info);
+export default memo(SiteInfo);
