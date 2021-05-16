@@ -9,9 +9,11 @@ import {
   CurrentPrice,
   buttonStyles,
 } from './style';
+import { productsCategory } from '../../pages/Home/constants';
 
 type Props = {
   name: string;
+  productCategory: string;
   amount: string;
   originalPrice: number;
   currentPrice: number;
@@ -32,7 +34,13 @@ const ProductCard = (props: Props): JSX.Element => {
       {props.discount ? (
         <OriginalPrice>{props.originalPrice} руб</OriginalPrice>
       ) : null}
-      <CurrentPrice style={!props.discount ? { marginTop: 23 } : {}}>
+      <CurrentPrice
+        style={
+          !props.discount && props.productCategory === productsCategory.newArrival
+            ? { marginTop: 23 }
+            : {}
+        }
+      >
         {props.currentPrice} руб
       </CurrentPrice>
       <Button {...buttonStyles}>В корзину</Button>
