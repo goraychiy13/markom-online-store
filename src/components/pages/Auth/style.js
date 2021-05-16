@@ -3,15 +3,16 @@ import { colors } from '../../../common/colors';
 
 export const AuthWrapper = styled.div`
   margin: 0 auto;
+  font-family: 'Fira Sans';
   padding: 0 40px;
 `;
 
 export const AuthHeader = styled.h1`
   margin: 0;
   padding: 1rem 0;
-  font-family: 'Fira Sans';
+
   line-height: 1.2;
-  font-size: 2.1429rem;
+  font-size: 2rem;
   color: ${colors.darkGrey};
 `;
 
@@ -31,7 +32,6 @@ export const AuthRow = styled.div`
 
 export const AuthLabel = styled.div`
   margin-bottom: 0.5em;
-  font-family: 'Fira Sans';
   font-size: 16px;
   font-weight: 400;
   line-height: 1;
@@ -56,7 +56,7 @@ export const AuthSelectWrapper = styled.div`
     width: 20px;
     height: 20px;
     right: 10px;
-    top: 9px;
+    top: 10px;
     opacity: 0.8;
     pointer-events: none;
     color: ${colors.grey};

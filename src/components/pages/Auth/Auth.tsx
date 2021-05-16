@@ -27,6 +27,7 @@ type Props = {};
 
 const Auth: React.FC<Props> = (props) => {
   const location = useLocation();
+
   const getLoginPage = (path: string): TypeLoginPage => {
     if (path.includes(paths[Page.LOGIN])) {
       return authSignIn;
