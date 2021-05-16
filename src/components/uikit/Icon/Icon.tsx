@@ -22,6 +22,8 @@ type Props = {
   height?: string;
   /** Icon margin. */
   margin?: string;
+  /** Icon fill. */
+  iconFill?: string;
 };
 
 const Icon = forwardRef<SVGSVGElement, Props>(function Icon(props, ref) {
@@ -38,6 +40,7 @@ const Icon = forwardRef<SVGSVGElement, Props>(function Icon(props, ref) {
         height: props.height,
         margin: props.margin,
       }}
+      fill={props.iconFill}
     >
       {props.title && <title>{props.title}</title>}
       <g dangerouslySetInnerHTML={{ __html: props.path }} />

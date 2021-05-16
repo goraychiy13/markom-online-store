@@ -13,6 +13,7 @@ export const StyledButton = styled.button`
   outline: none;
   transition: all 0.3s ease;
   box-shadow: none;
+  ${({ isRowReversed }) => `flex-direction: ${isRowReversed ? 'row-reverse' : 'row'}`};
   ${({ borderRadius }) => `border-radius: ${borderRadius ? borderRadius : '5px'}`};
   ${({ height }) => `height: ${height}`};
   ${({ width }) => `width: ${width}`};

@@ -13,24 +13,6 @@ export const InfoWrapper = styled.div`
   line-height: 1.5;
 `;
 
-export const InfoBreadcrumbs = styled.div`
-  padding: 1vw 0;
-  color: ${colors.grey};
-`;
-
-export const InfoBreadcrumb = styled.div`
-  display: inline-block;
-  vertical-align: top;
-  cursor: pointer;
-
-  &::after {
-    content: '/';
-    opacity: 0.7;
-    padding: 0 10px;
-    cursor: auto;
-  }
-`;
-
 export const InfoHeader = styled.h1`
   margin: 0;
   padding-top: 2vw;

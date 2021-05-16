@@ -1,12 +1,8 @@
 import { memo } from 'react';
 import htmlParser from 'react-html-parser';
-import { useHistory } from 'react-router-dom';
 import { colors } from '../../../common/colors';
-import { Page, paths } from '../../../core/routes/constants';
 import { linksInfo, TAG_LI, TAG_P, TAG_UL } from './constants';
 import {
-  InfoBreadcrumb,
-  InfoBreadcrumbs,
   InfoHeader,
   InfoLinks,
   InfoTextDiv,
@@ -21,12 +17,6 @@ type Props = {
 };
 
 const Info: React.FC<Props> = (props) => {
-  const history = useHistory();
-
-  const goToHome = (): void => {
-    history.push(paths[Page.HOME]);
-  };
-
   const getText = (tag: string, info: TypeInfo[]): JSX.Element => {
     switch (tag) {
       case TAG_UL:
@@ -66,12 +56,6 @@ const Info: React.FC<Props> = (props) => {
 
   return (
     <InfoWrapper data-name="terms-wrapper">
-      <InfoBreadcrumbs data-name="terms-breadcrumbs">
-        <InfoBreadcrumb data-name="terms-breadcrumb">
-          <span onClick={goToHome}>Главная</span>
-        </InfoBreadcrumb>
-        {props.page.header}
-      </InfoBreadcrumbs>
       <InfoHeader data-name="terms-header">{props.page.header}</InfoHeader>
       {props.page.section.map((section) =>
         section.title ? (
