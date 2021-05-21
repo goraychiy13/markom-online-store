@@ -81,3 +81,23 @@ export const BrandsTitle = styled.h1`
   color: ${colors.darkGrey};
   font-size: 32px;
 `;
+
+export const PromotionsWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+`
+
+export const Promotions = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+`
+
+export const PromotionsTitle = NewArrivalTitle;
+
+export const CustomerReviewWrapper = PromotionsWrapper;
+
+export const CustomerReviewTitle = NewArrivalTitle;
+
+export const CustomerReviews = Promotions;

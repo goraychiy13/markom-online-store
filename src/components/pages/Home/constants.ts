@@ -269,3 +269,46 @@ export const brands = [
     src: 'https://static-sl.insales.ru/r/urE3MJ2FTt8/fit/500/500/ce/1/plain/files/1/4357/14930181/original/Component-10.png',
   },
 ]
+
+export const promotions = [
+  {
+    id: '1',
+    image: 'https://static-sl.insales.ru/r/M7doH9VEMF0/fit/390/390/ce/1/plain/images/articles/1/5974/1161046/large_Фото__9_.jpg',
+    title: 'Отборные фрукты и овощи, с привлекательной ценой',
+    date: '10.11.2020',
+  },
+  {
+    id: '2',
+    image: 'https://static-sl.insales.ru/r/037mwZIFSmw/fit/390/390/ce/1/plain/images/articles/1/5973/1161045/large_Новость.jpg',
+    title: 'Дни испанской кухни',
+    date: '10.11.2020',
+  },  {
+    id: '3',
+    image: 'https://static-sl.insales.ru/r/CIlpH8NKMLE/fit/390/390/ce/1/plain/images/articles/1/5972/1161044/large_Фото__8_.jpg',
+    title: 'Скидка на зерновой кофе',
+    date: '20.07.2017',
+  },  {
+    id: '4',
+    image: 'https://static-sl.insales.ru/r/DyOZaKI3Eow/fit/390/390/ce/1/plain/images/articles/1/5971/1161043/large_Фото.jpg',
+    title: 'Скидка на всю выпечку 40% после 19:00',
+    date: '31.01.2016',
+  },
+]
+
+export const customerReviews = [
+  {
+    id: '1',
+    reviewerName: 'Alexey',
+    review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pellentesque ultrices tincidunt. Sed malesuada ipsum tellus, eget auctor nisl luctus vitae. Duis nec eros turpis. Sed convallis felis dui, sed suscipit nisi lobortis id. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pellentesque ultrices tincidunt. Sed malesuada ipsum tellus, eget auctor nisl luctus vitae. Duis nec eros turpis. Sed convallis felis dui, sed suscipit nisi lobortis id.',
+  },
+  {
+    id: '2',
+    reviewerName: 'Elena',
+    review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pellentesque ultrices tincidunt. Sed malesuada ipsum tellus, eget auctor nisl luctus vitae. Duis nec eros turpis. Sed convallis felis dui, sed suscipit nisi lobortis id.',
+  },
+  {
+    id: '3',
+    reviewerName: 'Egor',
+    review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pellentesque ultrices tincidunt. Sed malesuada ipsum tellus, eget auctor nisl luctus vitae. Duis nec eros turpis. Sed convallis felis dui, sed suscipit nisi lobortis id.',
+  }
+]
