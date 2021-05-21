@@ -17,6 +17,12 @@ import {
   BrandsWrapper,
   BrandsTitle,
   Brands,
+  PromotionsWrapper,
+  Promotions,
+  PromotionsTitle,
+  CustomerReviewWrapper,
+  CustomerReviewTitle,
+  CustomerReviews,
 } from './style';
 import { Carousel } from 'react-responsive-carousel';
 import ProductCard from '../../modules/ProductCard';
@@ -28,10 +34,15 @@ import {
   productsCategory,
   ourPlusesInfo,
   brands,
+  promotions,
+  customerReviews,
 } from './constants';
 import Banner from '../../modules/Banner';
 import DesertBanner from './DesertBanner';
 import OurPlusesItem from './OurPlusesItem';
+import Promotion from './Promotion';
+import CustomerReview from './CustomerReview';
+import Feedback from './Feedback';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const Home = (): JSX.Element => {
@@ -117,6 +128,28 @@ const Home = (): JSX.Element => {
           })}
         </Brands>
       </BrandsWrapper>
+      <PromotionsWrapper>
+        <PromotionsTitle>Акции</PromotionsTitle>
+        <Promotions>
+          
+          {
+            promotions.map((promotion) => {
+              return <Promotion {...promotion} />
+            })
+          }
+        </Promotions>
+      </PromotionsWrapper>
+      <CustomerReviewWrapper>
+        <CustomerReviewTitle>Отзывы клиентов</CustomerReviewTitle>
+          <CustomerReviews>
+            {
+              customerReviews.map((review) => {
+                return <CustomerReview {...review} />
+              })
+            }
+          </CustomerReviews>
+      </CustomerReviewWrapper>
+      <Feedback />
     </HomeWrapper>
   );
 };
