@@ -9,11 +9,13 @@ export const StyledInput = styled.input`
   font-weight: 400;
   line-height: 1.5;
   color: ${colors.darkGrey};
-  background: ${colors.white};
-  border: 1px solid ${colors.trolleyGrey};
-  ${({ borderRadius }) => `border-radius: ${borderRadius ? borderRadius : '6px'}`};
   outline: none;
   vertical-align: middle;
+  ${({ border }) => `border: ${border ?? `1px solid ${colors.trolleyGrey}`}`};
+  ${({ borderRadius }) => `border-radius: ${borderRadius ?? '6px'}`};
+  ${({ background }) => `background: ${background ?? colors.white}`};
+  ${({ marginRight }) => `margin-right: ${marginRight ?? 0}`};
+  ${({ height }) => `height: ${height ?? '25px'}`};
 
   &:focus {
     transition: 0.15s ease-in-out;
@@ -22,7 +24,7 @@ export const StyledInput = styled.input`
   }
 
   &::placeholder {
-    color: #999999;
-    opacity: 0.3;
+    ${({ color }) => `color: ${color ?? '#999999'}`};
+    ${({ color }) => `opacity: ${color ? 0.8 : 0.3}`};
   }
 `;

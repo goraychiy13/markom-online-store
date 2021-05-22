@@ -25,6 +25,7 @@ type Props = {
   isRowReversed?: boolean;
   icon?: TypeIcon;
   type?: string;
+  fontSize?: string;
 };
 
 function Button(props: Props): JSX.Element {
@@ -44,6 +45,7 @@ function Button(props: Props): JSX.Element {
       borderRadius={props.borderRadius}
       isRowReversed={props.isRowReversed}
       type={props.type}
+      fontSize={props.fontSize}
     >
       {props.hasIcon && props.icon && (
         <Icon

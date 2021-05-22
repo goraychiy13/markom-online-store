@@ -6,6 +6,7 @@ export const Container = styled.div`
     background-color: ${colors.minorShade};
     width: 388px;
     padding: 30px 30px 20px;
+    min-height: 250px;
 `
 
 export const CustomerReviewerName = styled.span`
