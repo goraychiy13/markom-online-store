@@ -131,7 +131,6 @@ const Home = (): JSX.Element => {
       <PromotionsWrapper>
         <PromotionsTitle>Акции</PromotionsTitle>
         <Promotions>
-          
           {
             promotions.map((promotion) => {
               return <Promotion {...promotion} />
