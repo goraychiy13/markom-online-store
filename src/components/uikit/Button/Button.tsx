@@ -4,7 +4,7 @@ import { StyledButton } from './style';
 import { SyleProps } from './type';
 
 type Props = {
-  onClick?: void;
+  onClick?: void | any;
 };
 
 function Button(props: Props & SyleProps): JSX.Element {
@@ -18,6 +18,8 @@ function Button(props: Props & SyleProps): JSX.Element {
     colorModifier: props.colorModifier,
     color: props.color,
     textDecoration: props.textDecoration,
+    backgroundColorModifier: props.backgroundColorModifier,
+    boxShadowModifier: props.boxShadowModifier,
     fontWeight: props.fontWeight,
     borderRadius: props.borderRadius,
     isRowReversed: props.isRowReversed,

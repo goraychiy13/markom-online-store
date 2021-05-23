@@ -6,7 +6,6 @@ import { TAG_GRID, TAG_P } from './constants';
 
 export const InfoWrapper = styled.div`
   margin: 0 auto;
-  padding: 0 40px;
   font-family: 'Fira Sans';
   font-size: 1rem;
   font-weight: 400;

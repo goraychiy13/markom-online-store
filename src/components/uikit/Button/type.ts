@@ -6,12 +6,14 @@ export type SyleProps = {
   maxWidth?: string;
   margin?: string;
   padding?: string;
-  backgroundColor: string;
   borderRadius?: string;
+  color?: string;
   colorModifier?: string;
+  boxShadowModifier?: string;
+  backgroundColor?: string;
+  backgroundColorModifier?: string;
   textDecoration?: string;
   fontWeight?: string;
-  color?: string;
   hasIcon?: boolean;
   children?: string;
   iconWidth?: string;
@@ -21,4 +23,5 @@ export type SyleProps = {
   isRowReversed?: boolean;
   icon?: TypeIcon;
   type?: string;
+  fontSize?: string;
 }

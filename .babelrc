@@ -1,6 +1,13 @@
 {
   "presets": [
-    "@babel/preset-env",
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "node": "10"
+        }
+      }
+    ],
     [
       "@babel/preset-react",
       {
@@ -10,11 +17,14 @@
     "@babel/preset-typescript"
   ],
   "plugins": [
-    ["module-resolver", {
-      "root": ["./src"],
-      "alias": {
-        "Src": "path.resolve(__dirname, 'src/components/')"
+    [
+      "module-resolver",
+      {
+        "root": ["./src"],
+        "alias": {
+          "Src": "path.resolve(__dirname, 'src/components/')"
+        }
       }
-    }]
+    ]
   ]
 }

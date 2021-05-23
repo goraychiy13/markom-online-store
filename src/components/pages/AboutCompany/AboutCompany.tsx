@@ -2,9 +2,7 @@ import { memo } from 'react';
 import SiteInfo from '../../modules/SiteInfo';
 import { companyInfo } from './constants';
 
-type Props = {};
-
-const AboutCompany: React.FC<Props> = (props) => {
+const AboutCompany: React.FC = (props) => {
   return <SiteInfo page={companyInfo} />;
 };
 

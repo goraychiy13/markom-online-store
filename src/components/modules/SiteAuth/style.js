@@ -2,15 +2,15 @@ import styled from 'styled-components';
 import { colors } from '../../../common/colors';
 
 export const AuthWrapper = styled.div`
-  margin: 0 auto;
   font-family: 'Fira Sans';
-  padding: 0 40px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
 `;
 
 export const AuthHeader = styled.h1`
   margin: 0;
   padding: 1rem 0;
-
   line-height: 1.2;
   font-size: 2rem;
   color: ${colors.darkGrey};
@@ -32,8 +32,6 @@ export const AuthRow = styled.div`
 
 export const AuthLabel = styled.div`
   margin-bottom: 0.5em;
-  font-size: 16px;
-  font-weight: 400;
   line-height: 1;
   color: ${colors.darkGrey};
 

@@ -2,9 +2,7 @@ import { memo } from 'react';
 import SiteAuth from '../../modules/SiteAuth';
 import { signUp } from './constants';
 
-type Props = {};
-
-const SignUp: React.FC<Props> = (props) => {
+const SignUp: React.FC = (props) => {
   return <SiteAuth page={signUp} />;
 };
 
