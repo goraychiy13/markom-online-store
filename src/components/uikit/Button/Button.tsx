@@ -1,21 +1,23 @@
-import { TypeIcon } from '../../../icons/types';
 import { memo } from 'react';
+import { TypeIcon } from '../../../icons/types';
 import Icon from '../Icon';
 import { StyledButton } from './style';
 
 type Props = {
-  onClick?: void;
+  onClick?: void | any;
   height?: string;
   width?: string;
   maxWidth?: string;
   margin?: string;
   padding?: string;
-  backgroundColor: string;
   borderRadius?: string;
+  color?: string;
   colorModifier?: string;
+  boxShadowModifier?: string;
+  backgroundColor?: string;
+  backgroundColorModifier?: string;
   textDecoration?: string;
   fontWeight?: string;
-  color?: string;
   hasIcon?: boolean;
   children?: string;
   iconWidth?: string;
@@ -37,9 +39,11 @@ function Button(props: Props): JSX.Element {
       maxWidth={props.maxWidth}
       margin={props.margin}
       padding={props.padding}
-      backgroundColor={props.backgroundColor}
-      colorModifier={props.colorModifier}
       color={props.color}
+      colorModifier={props.colorModifier}
+      boxShadowModifier={props.boxShadowModifier}
+      backgroundColor={props.backgroundColor}
+      backgroundColorModifier={props.backgroundColorModifier}
       textDecoration={props.textDecoration}
       fontWeight={props.fontWeight}
       borderRadius={props.borderRadius}

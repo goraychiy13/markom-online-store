@@ -10,5 +10,7 @@ export const colors = {
   darkOrange: '#ff4100',
   minorShade: '#f7f7f7',
   darkRed: '#e44542',
-  halfShade: '#808080',
+  gray98: '#fafafa',
+  gray93: '#ededed',
+  gray28: '#474747',
 };
