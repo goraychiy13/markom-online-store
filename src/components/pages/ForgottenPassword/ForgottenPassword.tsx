@@ -2,9 +2,7 @@ import { memo } from 'react';
 import SiteAuth from '../../modules/SiteAuth';
 import { forgottenPassword } from './constants';
 
-type Props = {};
-
-const ForgottenPassword: React.FC<Props> = (props) => {
+const ForgottenPassword: React.FC = (props) => {
   return <SiteAuth page={forgottenPassword} />;
 };
 

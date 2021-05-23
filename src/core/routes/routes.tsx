@@ -1,4 +1,5 @@
 import AboutCompany from '../../components/pages/AboutCompany';
+import BlogContainer from '../../components/pages/Blog/BlogContainer';
 import Contacts from '../../components/pages/Contacts';
 import Delivery from '../../components/pages/Delivery';
 import ForgottenPassword from '../../components/pages/ForgottenPassword';
@@ -51,6 +52,11 @@ export function getRoutes(): TypeRoute[] {
       type: Page.SIGN_UP,
       path: paths[Page.SIGN_UP],
       component: <SignUp />,
+    },
+    {
+      type: Page.BLOG,
+      path: paths[Page.BLOG],
+      component: <BlogContainer />,
     },
   ];
 }

@@ -13,19 +13,24 @@ export const StyledButton = styled.button`
   outline: none;
   transition: all 0.3s ease;
   box-shadow: none;
-  ${({ isRowReversed }) => `flex-direction: ${isRowReversed ? 'row-reverse' : 'row'}`};
-  ${({ borderRadius }) => `border-radius: ${borderRadius ? borderRadius : '5px'}`};
+  ${({ isRowReversed }) =>
+    `flex-direction: ${isRowReversed ? 'row-reverse' : 'row'}`};
+  ${({ borderRadius }) =>
+    `border-radius: ${borderRadius ? borderRadius : '5px'}`};
   ${({ height }) => `height: ${height}`};
   ${({ width }) => `width: ${width}`};
-  ${({ maxWidth }) => `max-width: ${maxWidth}`};
   ${({ margin }) => `margin: ${margin}`};
   ${({ padding }) => `padding: ${padding}`};
-  ${({ backgroundColor }) => `background-color: ${backgroundColor}`};
+  ${({ maxWidth }) => `max-width: ${maxWidth}`};
   ${({ color }) => `color: ${color || colors.white}`};
+  ${({ backgroundColor }) => `background-color: ${backgroundColor}`};
   ${({ textDecoration }) => `text-decoration: ${textDecoration}`};
   ${({ fontWeight }) => `font-weight: ${fontWeight}`};
 
   &:hover {
-    ${({ colorModifier }) => `background-color: ${colorModifier}`};
+    ${({ colorModifier }) => `color: ${colorModifier}`};
+    ${({ boxShadowModifier }) => `box-shadow: ${boxShadowModifier}`};
+    ${({ backgroundColorModifier }) =>
+      `background-color: ${backgroundColorModifier}`};
   }
 `;
