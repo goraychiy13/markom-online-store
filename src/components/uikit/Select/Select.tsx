@@ -1,7 +1,9 @@
 import { memo } from 'react';
 import { StyledSelect } from './style';
 
-type Props = { children: JSX.Element[] };
+type Props = {
+  children: JSX.Element[];
+};
 
 const Select: React.FC<Props> = (props) => {
   return (

@@ -9,6 +9,7 @@ export enum Page {
   SIGN_UP = 'SIGN_UP',
   CATALOG = 'CATALOG',
   BLOG = 'BLOG',
+  BLOG_ROUTE = 'BLOG_ROUTE',
 }
 
 export const paths = {
@@ -22,4 +23,5 @@ export const paths = {
   [Page.FORGOTTEN_PASSWORD]: '/auth/forgotten-password',
   [Page.SIGN_UP]: '/auth/sign-up',
   [Page.BLOG]: '/blog',
+  [Page.BLOG_ROUTE]: '/blog/:id',
 };

@@ -4,21 +4,21 @@ import { colors } from '../../../../common/colors';
 export const Title = styled.h2`
   font-size: 32px;
   color: ${colors.white};
-`
+`;
 export const Body = styled.span`
   color: ${colors.white};
   font-size: 24px;
   margin-bottom: 20px;
-`
+`;
 
 export const buttonStyles = {
   width: '170px',
   height: '40px',
   backgroundColor: colors.darkGreen,
-  colorModifier: colors.minorGreen,
-  type: "button",
+  backgroundColorModifier: colors.minorGreen,
+  type: 'button',
   fontWeight: 'normal',
-}
+};
 
 export const Container = styled.div`
   display: flex;

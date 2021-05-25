@@ -30,7 +30,7 @@ export const AuthRow = styled.div`
   }
 `;
 
-export const AuthLabel = styled.div`
+export const AuthLabel = styled.label`
   margin-bottom: 0.5em;
   line-height: 1;
   color: ${colors.darkGrey};
@@ -65,3 +65,25 @@ export const AuthButtons = styled.div`
   padding-top: 1rem;
   display: flex;
 `;
+
+export const firstButtonStyles = {
+  margin: 'auto 16px auto 0',
+  height: '40px',
+  padding: '0 16px',
+  color: colors.white,
+  backgroundColor: colors.darkGreen,
+  backgroundColorModifier: colors.minorGreen,
+  textDecoration: 'none',
+  fontWeight: '400',
+};
+
+export const authButtonStyles = {
+  margin: 'auto 16px auto 0',
+  height: '100%',
+  padding: '4px 0',
+  color: colors.darkGreen,
+  backgroundColor: colors.white,
+  backgroundColorModifier: 'none',
+  textDecoration: 'underline',
+  fontWeight: '400',
+};

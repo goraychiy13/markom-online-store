@@ -12,7 +12,8 @@ export const Container = styled.form`
   position: relative;
   padding: 10px;
   margin-right: 15px;
-`
+`;
+
 export const Discount = styled.div`
   position: absolute;
   top: 3px;
@@ -27,7 +28,7 @@ export const Discount = styled.div`
   color: ${colors.white};
   font-size: 1.1rem;
   z-index: 1001;
-`
+`;
 
 export const CardName = styled.a`
   text-decoration: none;
@@ -37,21 +38,23 @@ export const CardName = styled.a`
   margin-top: 15px;
 
   &:hover {
-    color: ${colors.minorGreen}
+    color: ${colors.minorGreen};
   }
-`
+`;
+
 export const OriginalPrice = styled.span`
   text-decoration: line-through;
   font-size: 18px;
   color: ${colors.grey};
   line-height: 1.3;
-`
+`;
+
 export const CurrentPrice = styled.span`
   font-size: 28px;
   color: ${colors.darkGrey};
   font-weight: 600;
   line-height: 1.3;
-`
+`;
 
 export const CardImage = styled.div`
   width: 202px;
@@ -60,7 +63,7 @@ export const CardImage = styled.div`
   background-size: cover;
   cursor: pointer;
   ${({ cardImage }) => `background-image: url(${cardImage})`};
-`
+`;
 
 export const buttonStyles = {
   type: 'button',
@@ -70,7 +73,7 @@ export const buttonStyles = {
   iconWidth: '19px',
   iconHeight: '19px',
   backgroundColor: colors.darkGreen,
-  colorModifier: colors.minorGreen,
+  backgroundColorModifier: colors.minorGreen,
   iconMargin: '0 0 0 5px',
   fontWeight: '400',
   icon: basketIcon,

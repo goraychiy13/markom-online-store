@@ -26,7 +26,7 @@ export const IconWrapper = styled.div`
   cursor: pointer;
   ${({ marginLeft }) => `margin-left: ${marginLeft ?? '0'}`};
   position: relative;
-`
+`;
 export const AmountProduct = styled.div`
   display: flex;
   align-items: center;
@@ -41,7 +41,7 @@ export const AmountProduct = styled.div`
   position: absolute;
   top: -5px;
   left: 23px;
-`
+`;
 
 export const TotalPuchase = styled.div`
   color: ${colors.green};
@@ -49,7 +49,7 @@ export const TotalPuchase = styled.div`
   font-weight: bold;
   font-size: 18px;
   cursor: pointer;
-`
+`;
 
 export const buttonStyles = {
   hasIcon: true,
@@ -58,8 +58,8 @@ export const buttonStyles = {
   iconWidth: '30px',
   iconHeight: '30px',
   backgroundColor: colors.darkGreen,
-  colorModifier: colors.minorGreen,
+  backgroundColorModifier: colors.minorGreen,
   iconMargin: '0 12px 0 0',
   icon: menuIcon,
-  type: "button",
-}
+  type: 'button',
+};

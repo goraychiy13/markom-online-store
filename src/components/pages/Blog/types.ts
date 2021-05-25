@@ -1,4 +1,4 @@
-export type TypeBlogCards = {
+export type TypeBlogData = {
   id: string;
   imageUrl: string;
   date: string;
