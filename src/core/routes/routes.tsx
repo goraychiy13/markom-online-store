@@ -1,4 +1,5 @@
 import AboutCompany from '../../components/pages/AboutCompany';
+import ArticleContainer from '../../components/pages/Article/ArticleContainer';
 import BlogContainer from '../../components/pages/Blog/BlogContainer';
 import Contacts from '../../components/pages/Contacts';
 import Delivery from '../../components/pages/Delivery';
@@ -57,6 +58,12 @@ export function getRoutes(): TypeRoute[] {
       type: Page.BLOG,
       path: paths[Page.BLOG],
       component: <BlogContainer />,
+      exact: true,
+    },
+    {
+      type: Page.BLOG_ROUTE,
+      path: paths[Page.BLOG_ROUTE],
+      component: <ArticleContainer />,
     },
   ];
 }

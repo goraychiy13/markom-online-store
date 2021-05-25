@@ -1,36 +1,37 @@
 import { memo } from 'react';
-import { colors } from '../../../common/colors';
+import { Link } from 'react-router-dom';
+import { Page, paths } from '../../../core/routes/constants';
+import { TypeDispatch } from '../../../redux/reduxStore';
 import Pagination from '../../modules/Pagination/Pagination';
 import Button from '../../uikit/Button';
+import Img from '../../uikit/Img/Img';
 import { tagButtons } from './constants';
 import {
+  ArticleContainer,
+  ArticleDate,
+  ArticleDescription,
+  ArticleTitle,
+  BlogArticle,
+  BlogArticles,
   BlogButtons,
-  BlogCard,
-  BlogCards,
   BlogHeader,
   BlogWrapper,
-  CardContainer,
-  CardDate,
-  CardDescription,
-  CardTitle,
+  buttonStyles,
+  imageStyles,
 } from './style';
-import { TypeBlogCards } from './types';
+import { TypeBlogData } from './types';
 
 type Props = {
-  blogCards: TypeBlogCards[];
-  paginatedCards: TypeBlogCards[];
+  blogData: TypeBlogData[];
+  articlesList: TypeBlogData[];
   currentPage: number;
   portionSize: number;
   totalCount: number;
   pageSize: number;
-  getPaginatedCards: (
-    page: number,
-    pageSize: number,
-    cards: TypeBlogCards[],
-  ) => void;
+  dispatch: TypeDispatch;
 };
 
-const Blogs: React.FC<Props> = (props) => {
+const Blog: React.FC<Props> = (props) => {
   return (
     <BlogWrapper data-name="blog-wrapper">
       <BlogHeader data-name="blog-header">
@@ -38,49 +39,54 @@ const Blogs: React.FC<Props> = (props) => {
       </BlogHeader>
       <BlogButtons data-name="blog-buttons">
         {tagButtons.map((button) => (
-          <Button
-            key={button.id}
-            height="40px"
-            padding="0 1.75rem"
-            margin="0 0.5rem 0.5rem 0"
-            color={colors.darkGrey}
-            colorModifier={colors.white}
-            backgroundColor={colors.gray98}
-            backgroundColorModifier={colors.darkGreen}
-          >
+          <Button key={button.id} {...buttonStyles}>
             {button.tagName}
           </Button>
         ))}
       </BlogButtons>
-      <BlogCards data-name="blog-cards">
-        {props.paginatedCards &&
-          props.paginatedCards.map((card) => (
-            <BlogCard key={card.id} data-name="blog-card">
-              <img
-                src={card.imageUrl}
-                alt="blogImage"
-                style={{ width: '100%', cursor: 'pointer' }}
-              />
-              <CardContainer data-name="card-container">
-                <CardDate data-name="card-date">{card.date}</CardDate>
-                <CardTitle data-name="card-title">{card.title}</CardTitle>
-                <CardDescription data-name="card-description">
-                  {card.description}
-                </CardDescription>
-              </CardContainer>
-            </BlogCard>
+      <BlogArticles data-name="blog-articles">
+        {props.articlesList &&
+          props.articlesList.map((article) => (
+            <BlogArticle key={article.id} data-name="blog-article">
+              <Link
+                to={paths[Page.BLOG] + '/' + article.url}
+                style={{ textDecoration: 'none' }}
+              >
+                <Img
+                  src={article.imageUrl}
+                  alt="articleImage"
+                  {...imageStyles}
+                />
+              </Link>
+              <ArticleContainer data-name="article-container">
+                <ArticleDate data-name="article-date">
+                  {article.date}
+                </ArticleDate>
+                <Link
+                  to={paths[Page.BLOG] + '/' + article.url}
+                  style={{ textDecoration: 'none' }}
+                >
+                  <ArticleTitle data-name="article-title">
+                    {article.title}
+                  </ArticleTitle>
+                </Link>
+                <ArticleDescription data-name="article-description">
+                  {article.description}
+                </ArticleDescription>
+              </ArticleContainer>
+            </BlogArticle>
           ))}
-      </BlogCards>
+      </BlogArticles>
       <Pagination
-        blogCards={props.blogCards}
+        blogData={props.blogData}
         currentPage={props.currentPage}
         portionSize={props.portionSize}
         totalCount={props.totalCount}
         pageSize={props.pageSize}
-        getPaginatedCards={props.getPaginatedCards}
+        dispatch={props.dispatch}
       />
     </BlogWrapper>
   );
 };
 
-export default memo(Blogs);
+export default memo(Blog);

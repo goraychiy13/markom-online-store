@@ -1,8 +1,7 @@
-export type TypeBlogData = {
+export type TypeArticleInfo = {
   id: string;
   imageUrl: string;
   url: string;
-  date: string;
   title: string;
-  description: string;
+  info: string;
 };
