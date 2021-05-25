@@ -23,5 +23,5 @@ export const paths = {
   [Page.FORGOTTEN_PASSWORD]: '/auth/forgotten-password',
   [Page.SIGN_UP]: '/auth/sign-up',
   [Page.BLOG]: '/blog',
-  [Page.BLOG_ROUTE]: '/blog/:url',
+  [Page.BLOG_ROUTE]: '/blog/:id',
 };

@@ -10,7 +10,6 @@ const BlogContainer: React.FC = (props) => {
     blogData: state.blogPage.blogData,
     articlesList: state.blogPage.articlesList,
     currentPage: state.blogPage.currentPage,
-    portionSize: state.blogPage.portionSize,
     totalCount: state.blogPage.totalCount,
     pageSize: state.blogPage.pageSize,
   }));
@@ -24,7 +23,6 @@ const BlogContainer: React.FC = (props) => {
       blogData={blogState.blogData}
       articlesList={blogState.articlesList}
       currentPage={blogState.currentPage}
-      portionSize={blogState.portionSize}
       totalCount={blogState.totalCount}
       pageSize={blogState.pageSize}
       dispatch={dispatch}

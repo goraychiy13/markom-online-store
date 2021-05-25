@@ -25,7 +25,6 @@ type Props = {
   blogData: TypeBlogData[];
   articlesList: TypeBlogData[];
   currentPage: number;
-  portionSize: number;
   totalCount: number;
   pageSize: number;
   dispatch: TypeDispatch;
@@ -49,7 +48,7 @@ const Blog: React.FC<Props> = (props) => {
           props.articlesList.map((article) => (
             <BlogArticle key={article.id} data-name="blog-article">
               <Link
-                to={paths[Page.BLOG] + '/' + article.url}
+                to={paths[Page.BLOG] + '/' + article.id}
                 style={{ textDecoration: 'none' }}
               >
                 <Img
@@ -63,7 +62,7 @@ const Blog: React.FC<Props> = (props) => {
                   {article.date}
                 </ArticleDate>
                 <Link
-                  to={paths[Page.BLOG] + '/' + article.url}
+                  to={paths[Page.BLOG] + '/' + article.id}
                   style={{ textDecoration: 'none' }}
                 >
                   <ArticleTitle data-name="article-title">
@@ -80,7 +79,6 @@ const Blog: React.FC<Props> = (props) => {
       <Pagination
         blogData={props.blogData}
         currentPage={props.currentPage}
-        portionSize={props.portionSize}
         totalCount={props.totalCount}
         pageSize={props.pageSize}
         dispatch={props.dispatch}

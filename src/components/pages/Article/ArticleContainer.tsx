@@ -7,7 +7,7 @@ import NotFound from '../NotFound/NotFound';
 import Article from './Article';
 
 const ArticleContainer: React.FC = (props) => {
-  const { url } = useParams<{ url: string }>();
+  const { id } = useParams<{ id: string }>();
 
   const dispatch = useDispatch();
   const articleState = useSelector((state: TypeAppState) => ({
@@ -15,8 +15,8 @@ const ArticleContainer: React.FC = (props) => {
   }));
 
   useEffect(() => {
-    dispatch(thunks.getArticleInfo(url));
-  }, [dispatch, url]);
+    dispatch(thunks.getArticleInfo(id));
+  }, [dispatch, id]);
 
   return (
     <>

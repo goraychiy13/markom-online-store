@@ -21,7 +21,6 @@ const initialState = {
   articlesList: [] as TypeBlogData[],
   articleInfo: {} as TypeArticleInfo,
   currentPage: 1,
-  portionSize: 3,
   totalCount: 0,
   pageSize: 3,
 };
@@ -92,12 +91,10 @@ export const thunks = {
     dispatch(actions.setArticlesList(list));
     dispatch(actions.setCurrentPage(page));
   },
-  getArticleInfo: (url: string): TypeThunk => async (
-    dispatch: TypeDispatch,
-  ) => {
+  getArticleInfo: (id: string): TypeThunk => async (dispatch: TypeDispatch) => {
     const response = await axios.get('/src/mocks/getArticleInfo.json');
     const currentInfo = response.data.find(
-      (article: TypeArticleInfo) => article.url === url,
+      (article: TypeArticleInfo) => article.id === id,
     );
     dispatch(actions.setArticlesInfo(currentInfo));
   },

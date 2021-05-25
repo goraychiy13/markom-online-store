@@ -8,14 +8,14 @@ const NotFound: React.FC = (props) => {
       <NotFoundHeader data-name="not-fount-header">
         Здравствуйте!
       </NotFoundHeader>
-      {paragraph.map((obj) => (
-        <NotFoundParagraph key={obj.id} data-name="not-found-paragraph">
-          {obj.text}
+      {paragraph.map((item) => (
+        <NotFoundParagraph key={item.id} data-name="not-found-paragraph">
+          {item.text}
         </NotFoundParagraph>
       ))}
       <ul>
-        {list.map((obj) => (
-          <li key={obj.id}>{obj.text}</li>
+        {list.map((item) => (
+          <li key={item.id}>{item.text}</li>
         ))}
       </ul>
     </NotFoundWrapper>
