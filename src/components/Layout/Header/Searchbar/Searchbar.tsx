@@ -3,7 +3,13 @@ import { memo } from 'react';
 import { useHistory } from 'react-router';
 import { Page, paths } from '../../../../core/routes/constants';
 import Button from '../../../uikit/Button';
-import Logo, { StyledSearchbar, IconWrapper, AmountProduct, TotalPuchase, buttonStyles } from './style';
+import Logo, {
+  StyledSearchbar,
+  IconWrapper,
+  AmountProduct,
+  TotalPuchase,
+  buttonStyles,
+} from './style';
 import Icon from '../../../uikit/Icon';
 import { userTools, userToolTitles } from './constants';
 
@@ -40,9 +46,7 @@ function Searchbar(): JSX.Element {
   return (
     <StyledSearchbar data-name="styled-searchbar">
       <Logo onClick={goToHome} data-name="searchbar-logo" />
-      <Button {...buttonStyles}>
-        Каталог
-      </Button>
+      <Button {...buttonStyles}>Каталог</Button>
       <InputSearch />
       {userTools.map((tool) => {
         return (
@@ -63,9 +67,7 @@ function Searchbar(): JSX.Element {
           </IconWrapper>
         );
       })}
-      <TotalPuchase onClick={handeBasket}>
-        0 руб
-      </TotalPuchase>
+      <TotalPuchase onClick={handeBasket}>0 руб</TotalPuchase>
     </StyledSearchbar>
   );
 }

@@ -2,8 +2,6 @@
 import React, { memo, forwardRef } from 'react';
 
 type Props = {
-  /** Additional class. */
-  className?: string;
   /** OnClick method. */
   onClick?: () => void;
   /** Icon path. */
@@ -29,7 +27,6 @@ type Props = {
 const Icon = forwardRef<SVGSVGElement, Props>(function Icon(props, ref) {
   return (
     <svg
-      className={props.className}
       ref={ref}
       role="img"
       tabIndex={props.tabIndex}
