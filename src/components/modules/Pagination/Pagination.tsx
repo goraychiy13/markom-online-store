@@ -42,7 +42,10 @@ const Pagination: React.FC<Props> = (props) => {
     <PaginationWrapper data-name="pagination-wrapper">
       {props.currentPage > 1 && (
         <div onClick={() => onPageChange(props.currentPage - 1)}>
-          <Link to={location.pathname + `?page=${props.currentPage - 1}`}>
+          <Link
+            to={location.pathname + `?page=${props.currentPage - 1}`}
+            style={{ textDecoration: 'none' }}
+          >
             <Button {...toggleButtonStyles}>Предыдущая</Button>
           </Link>
         </div>
@@ -51,7 +54,10 @@ const Pagination: React.FC<Props> = (props) => {
         .filter((page) => page >= leftPortion && page <= rightPortion)
         .map((page) => (
           <div key={page} onClick={() => onPageChange(page)}>
-            <Link to={location.pathname + `?page=${page}`}>
+            <Link
+              to={location.pathname + `?page=${page}`}
+              style={{ textDecoration: 'none' }}
+            >
               {page === props.currentPage ? (
                 <Button {...currentButtonStyles}>{`${page}`}</Button>
               ) : (
@@ -62,7 +68,10 @@ const Pagination: React.FC<Props> = (props) => {
         ))}
       {props.currentPage < pagesCount && (
         <div onClick={() => onPageChange(props.currentPage + 1)}>
-          <Link to={location.pathname + `?page=${props.currentPage + 1}`}>
+          <Link
+            to={location.pathname + `?page=${props.currentPage + 1}`}
+            style={{ textDecoration: 'none' }}
+          >
             <Button {...toggleButtonStyles}>Следующая</Button>
           </Link>
         </div>

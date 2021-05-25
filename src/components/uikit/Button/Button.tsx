@@ -24,6 +24,7 @@ function Button(props: Props & SyleProps): JSX.Element {
     borderRadius: props.borderRadius,
     isRowReversed: props.isRowReversed,
     type: props.type,
+    fontSize: props.fontSize,
   };
 
   const iconStyleProps = {
