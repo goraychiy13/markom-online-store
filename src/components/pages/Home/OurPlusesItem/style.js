@@ -12,12 +12,12 @@ export const Container = styled.div`
   color: ${colors.darkGrey};
 `;
 
-export const Tytle = styled.span`
+export const Title = styled.span`
   font-size: 24px;
   font-weight: bold;
-`
+`;
 
 export const Body = styled.p`
   font-size: 24px;
   text-align: center;
-`
+`;

@@ -1,5 +1,10 @@
 import { memo } from 'react';
-import { Container, PromotionTitle, PromotionDate, PromotionImage } from './style';
+import {
+  Container,
+  PromotionDate,
+  PromotionImage,
+  PromotionTitle,
+} from './style';
 
 type Props = {
   image: string;
@@ -9,10 +14,16 @@ type Props = {
 
 function Promotion(props: Props): JSX.Element {
   return (
-    <Container>
-      <PromotionImage width="328px" height="328px" src={props.image} alt="" />
-      <PromotionTitle>{props.title}</PromotionTitle>
-      <PromotionDate>{props.date}</PromotionDate>
+    <Container data-name="container">
+      <PromotionImage
+        width="328px"
+        height="328px"
+        src={props.image}
+        alt=""
+        data-name="promotion-image"
+      />
+      <PromotionTitle data-name="promotion-title">{props.title}</PromotionTitle>
+      <PromotionDate data-name="promotion-data">{props.date}</PromotionDate>
     </Container>
   );
 }

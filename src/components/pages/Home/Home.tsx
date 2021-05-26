@@ -6,6 +6,7 @@ import ProductCard from '../../modules/ProductCard';
 import {
   bannersInfo,
   brands,
+  carouselItems,
   customerReviews,
   drinksInfo,
   nutsInfo,
@@ -15,7 +16,7 @@ import {
   promotions,
 } from './constants';
 import CustomerReview from './CustomerReview';
-import DesertBanner from './DesertBanner';
+import DesertBanner from './DessertBanner';
 import Feedback from './Feedback';
 import OurPlusesItem from './OurPlusesItem';
 import Promotion from './Promotion';
@@ -35,7 +36,7 @@ import {
   NewArrivalTitle,
   NewArrivalWrapper,
   NutsTitle,
-  NutstWrapper,
+  NutsWrapper,
   OurPluses,
   OurPlusesTitle,
   OurPlusesWrapper,
@@ -47,26 +48,22 @@ import {
 
 const Home: React.FC = () => {
   return (
-    <HomeWrapper>
-      <Carousel showThumbs={false} showArrows>
-        <CarouselItem>
-          <img
-            src="https://static-sl.insales.ru/r/nlEYOkOZekE/fit/1408/0/ce/1/plain/files/1/2110/14641214/original/slider.jpg@webp"
-            alt="slide"
-          />
-          <CarouselTitle>Премиум продукты высокого качества</CarouselTitle>
-        </CarouselItem>
-        <CarouselItem>
-          <img
-            src="https://static-sl.insales.ru/r/nlEYOkOZekE/fit/1408/0/ce/1/plain/files/1/2110/14641214/original/slider.jpg@webp"
-            alt="slide"
-          />
-          <CarouselTitle>Описание слайда 2</CarouselTitle>
-        </CarouselItem>
+    <HomeWrapper data-name="home-wrapper">
+      <Carousel showThumbs={false} showArrows data-name="carousel">
+        {carouselItems.map((item) => (
+          <CarouselItem key={item.id} data-name="carousel-item">
+            <img src={item.urlImage} alt="slide" />
+            <CarouselTitle data-name="carousel-title">
+              {item.title}
+            </CarouselTitle>
+          </CarouselItem>
+        ))}
       </Carousel>
-      <NewArrivalWrapper>
-        <NewArrivalTitle>{productsCategory.newArrival}</NewArrivalTitle>
-        <ProductCardsWrapper>
+      <NewArrivalWrapper data-name="new-arrival-wrapper">
+        <NewArrivalTitle data-name="new-arrival-title">
+          {productsCategory.newArrival}
+        </NewArrivalTitle>
+        <ProductCardsWrapper data-name="product-cards-wrapper">
           {productCardInfo.map((card) => (
             <ProductCard
               key={card.id}
@@ -76,15 +73,17 @@ const Home: React.FC = () => {
           ))}
         </ProductCardsWrapper>
       </NewArrivalWrapper>
-      <BannerWrapper>
+      <BannerWrapper data-name="banner-wrapper">
         {bannersInfo.map((banner) => (
           <Banner key={banner.id} {...banner} />
         ))}
       </BannerWrapper>
       <DesertBanner />
-      <DrinksWrapper>
-        <DrinksTitle>{productsCategory.drinks}</DrinksTitle>
-        <ProductCardsWrapper>
+      <DrinksWrapper data-name="drinks-wrapper">
+        <DrinksTitle data-name="drinks-title">
+          {productsCategory.drinks}
+        </DrinksTitle>
+        <ProductCardsWrapper data-name="product-cards-wrapper">
           {drinksInfo.map((card) => (
             <ProductCard
               key={card.id}
@@ -94,9 +93,9 @@ const Home: React.FC = () => {
           ))}
         </ProductCardsWrapper>
       </DrinksWrapper>
-      <NutstWrapper>
-        <NutsTitle>{productsCategory.nuts}</NutsTitle>
-        <ProductCardsWrapper>
+      <NutsWrapper data-name="nuts-wrapper">
+        <NutsTitle data-name="nuts-title">{productsCategory.nuts}</NutsTitle>
+        <ProductCardsWrapper data-name="product-cards-wrapper">
           {nutsInfo.map((card) => (
             <ProductCard
               key={card.id}
@@ -105,18 +104,18 @@ const Home: React.FC = () => {
             />
           ))}
         </ProductCardsWrapper>
-      </NutstWrapper>
-      <OurPlusesWrapper>
-        <OurPlusesTitle>Наши плюсы</OurPlusesTitle>
-        <OurPluses>
+      </NutsWrapper>
+      <OurPlusesWrapper data-name="our-pluses-wrapper">
+        <OurPlusesTitle data-name="our-pluses-title">Наши плюсы</OurPlusesTitle>
+        <OurPluses data-name="our-pluses">
           {ourPlusesInfo.map((item) => (
             <OurPlusesItem key={item.id} {...item} />
           ))}
         </OurPluses>
       </OurPlusesWrapper>
-      <BrandsWrapper>
-        <BrandsTitle>Бренды</BrandsTitle>
-        <Brands>
+      <BrandsWrapper data-name="brands-wrapper">
+        <BrandsTitle data-name="brands-title">Бренды</BrandsTitle>
+        <Brands data-name="brands">
           {brands.map((brand) => (
             <img
               key={brand.id}
@@ -128,16 +127,18 @@ const Home: React.FC = () => {
           ))}
         </Brands>
       </BrandsWrapper>
-      <PromotionsWrapper>
-        <PromotionsTitle>Акции</PromotionsTitle>
-        <Promotions>
+      <PromotionsWrapper data-name="promotions-wrapper">
+        <PromotionsTitle data-name="promotions-title">Акции</PromotionsTitle>
+        <Promotions data-name="promotions">
           {promotions.map((promotion) => (
             <Promotion key={promotion.id} {...promotion} />
           ))}
         </Promotions>
       </PromotionsWrapper>
-      <CustomerReviewWrapper>
-        <CustomerReviewTitle>Отзывы клиентов</CustomerReviewTitle>
+      <CustomerReviewWrapper data-name="customer-review-wrapper">
+        <CustomerReviewTitle data-name="customer-review-title">
+          Отзывы клиентов
+        </CustomerReviewTitle>
         <CustomerReviews data-name="customer-reviews">
           {customerReviews.map((review) => (
             <CustomerReview key={review.id} {...review} />

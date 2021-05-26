@@ -1,7 +1,7 @@
 import { memo } from 'react';
-import { StyledCurrentPage, HomePageLink, CurrentPageLink } from './style';
-import { useLocation, useHistory } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router-dom';
 import { Page, paths } from '../../../../core/routes/constants';
+import { CurrentPageLink, HomePageLink, StyledCurrentPage } from './style';
 
 function CurrentPage(): JSX.Element {
   const homePageTitle = 'Главная';
@@ -42,10 +42,15 @@ function CurrentPage(): JSX.Element {
           ? false
           : true
       }
+      data-name="styled-current-page"
     >
-      <HomePageLink onClick={goToHome}>{homePageTitle}</HomePageLink>
+      <HomePageLink onClick={goToHome} data-name="home-page-link">
+        {homePageTitle}
+      </HomePageLink>
       <span>/</span>
-      <CurrentPageLink>{getCurrentPage()}</CurrentPageLink>
+      <CurrentPageLink data-name="current-page-link">
+        {getCurrentPage()}
+      </CurrentPageLink>
     </StyledCurrentPage>
   );
 }

@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import { Container, CustomerReviewerName, CustomerReviewBody } from './style';
+import { Container, CustomerReviewBody, CustomerReviewerName } from './style';
 
 type Props = {
   reviewerName: string;
@@ -8,9 +8,13 @@ type Props = {
 
 function CustomerReview(props: Props): JSX.Element {
   return (
-    <Container>
-        <CustomerReviewerName>{props.reviewerName}</CustomerReviewerName>
-        <CustomerReviewBody>{props.review}</CustomerReviewBody>
+    <Container data-name="container">
+      <CustomerReviewerName data-name="customer-reviewer-name">
+        {props.reviewerName}
+      </CustomerReviewerName>
+      <CustomerReviewBody data-name="customer-review-body">
+        {props.review}
+      </CustomerReviewBody>
     </Container>
   );
 }

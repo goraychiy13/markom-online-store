@@ -1,6 +1,5 @@
 import { TypeBlogData } from 'components/pages/Blog/types';
 import React, { memo, useState } from 'react';
-import { useLocation } from 'react-router';
 import { thunks } from '../../../redux/reducers/blogReducer';
 import { TypeDispatch } from '../../../redux/reduxStore';
 import Button from '../../uikit/Button/Button';
@@ -24,7 +23,6 @@ const Pagination: React.FC<Props> = (props) => {
   const pages: number[] = [];
   for (let i = 1; i <= pagesCount; i++) pages.push(i);
 
-  const location = useLocation();
   const [leftPortion, setLeftPortion] = useState(1);
   const [rightPortion, setRightPortion] = useState(3);
 

@@ -10,9 +10,9 @@ type Props = {};
 
 function Feedback(props: Props): JSX.Element {
   return (
-    <Container>
-      <Title>Обратная связь</Title>
-      <NameEmailWrapper>
+    <Container data-name="container">
+      <Title data-name="title">Обратная связь</Title>
+      <NameEmailWrapper data-name="name-email-wrapper">
         <Input
           border="none"
           background={colors.minorShade}

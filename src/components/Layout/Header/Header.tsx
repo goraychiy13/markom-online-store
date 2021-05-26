@@ -1,15 +1,15 @@
 import { memo } from 'react';
-import { NavbarWrapper, NavbarContent, HeaderWrapper } from './style';
+import CurrentPage from './CurrentPage';
 import Navbar from './Navbar';
 import NavbarStatic from './NavbarStatic';
 import Searchbar from './Searchbar';
-import CurrentPage from './CurrentPage';
+import { HeaderWrapper, NavbarContent, NavbarWrapper } from './style';
 
 function Header(): JSX.Element {
   return (
-    <HeaderWrapper>
-      <NavbarWrapper data-name="header-wrapper">
-        <NavbarContent data-name="header-content">
+    <HeaderWrapper data-name="header-wrapper">
+      <NavbarWrapper data-name="navbar-wrapper">
+        <NavbarContent data-name="navbar-content">
           <Navbar />
           <NavbarStatic />
         </NavbarContent>

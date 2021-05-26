@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import { Container, BannerImage, Footer } from './style';
+import { BannerImage, Container, Footer } from './style';
 
 type Props = {
   bannerImage: string;
@@ -11,14 +11,15 @@ type Props = {
 
 function Banner(props: Props): JSX.Element {
   return (
-    <Container width={props.width}>
+    <Container width={props.width} data-name="container">
       <BannerImage
         alt=""
         src={props.bannerImage}
         width={props.width}
         height={props.imageHeight}
+        data-name="banner-image"
       />
-      <Footer>{props.name}</Footer>
+      <Footer data-name="footer">{props.name}</Footer>
     </Container>
   );
 }

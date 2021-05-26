@@ -10,7 +10,7 @@ import {
   SET_BLOG_DATA,
   SET_CURRENT_PAGE,
   SET_TOTAL_COUNT,
-} from './actionTypes';
+} from '../actionTypes';
 
 type TypeInitialState = typeof initialState;
 type TypeAction = InferActionsType<typeof actions>;

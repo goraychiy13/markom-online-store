@@ -14,7 +14,7 @@ export const Container = styled.div`
 
 export const BannerImage = styled.img`
   border-radius: 4px 4px 0 0;
-`
+`;
 
 export const Footer = styled.div`
   height: 70px;
@@ -22,4 +22,4 @@ export const Footer = styled.div`
   align-items: center;
   padding-left: 24px;
   font-size: 24px;
-`
+`;

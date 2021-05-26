@@ -8,6 +8,7 @@ export const Container = styled.div`
   align-items: center;
   margin: 0 auto;
 `;
+
 export const Title = styled.h1`
   margin-bottom: 20px;
   color: ${colors.darkGrey};
