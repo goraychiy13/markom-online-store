@@ -8,5 +8,5 @@ export const headerStaticElements = [
   {
     title: '+7(800) 800-80-80',
     color: colors.darkGrey,
-  }
-]
+  },
+];

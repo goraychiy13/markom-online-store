@@ -1,15 +1,15 @@
-import Button from '../../uikit/Button';
 import { memo } from 'react';
+import { productsCategory } from '../../pages/Home/constants';
+import Button from '../../uikit/Button';
 import {
-  Container,
-  Discount,
+  buttonStyles,
   CardImage,
   CardName,
-  OriginalPrice,
+  Container,
   CurrentPrice,
-  buttonStyles,
+  Discount,
+  OriginalPrice,
 } from './style';
-import { productsCategory } from '../../pages/Home/constants';
 
 type Props = {
   name: string;
@@ -27,19 +27,25 @@ const ProductCard = (props: Props): JSX.Element => {
   }
 
   return (
-    <Container>
-      {props.discount ? <Discount>-{props.discount}%</Discount> : null}
-      <CardImage cardImage={props.cardImage} />
-      <CardName>{getCardName()}</CardName>
+    <Container data-name="container">
       {props.discount ? (
-        <OriginalPrice>{props.originalPrice} руб</OriginalPrice>
+        <Discount data-name="discount">-{props.discount}%</Discount>
+      ) : null}
+      <CardImage cardImage={props.cardImage} data-name="card-image" />
+      <CardName data-name="card-name">{getCardName()}</CardName>
+      {props.discount ? (
+        <OriginalPrice data-name="original-price">
+          {props.originalPrice} руб
+        </OriginalPrice>
       ) : null}
       <CurrentPrice
         style={
-          !props.discount && props.productCategory === productsCategory.newArrival
+          !props.discount &&
+          props.productCategory === productsCategory.newArrival
             ? { marginTop: 23 }
             : {}
         }
+        data-name="current-price"
       >
         {props.currentPrice} руб
       </CurrentPrice>

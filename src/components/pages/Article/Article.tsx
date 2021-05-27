@@ -9,7 +9,7 @@ type Props = {
 
 const Article: React.FC<Props> = (props) => {
   return (
-    <ArticleWrapper>
+    <ArticleWrapper data-name="article-wrapper">
       <Img
         src={props.articleInfo.imageUrl}
         alt="articleImage"

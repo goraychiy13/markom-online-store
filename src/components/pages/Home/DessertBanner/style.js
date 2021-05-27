@@ -5,6 +5,7 @@ export const Title = styled.h2`
   font-size: 32px;
   color: ${colors.white};
 `;
+
 export const Body = styled.span`
   color: ${colors.white};
   font-size: 24px;

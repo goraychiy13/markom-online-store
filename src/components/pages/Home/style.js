@@ -5,6 +5,7 @@ export const HomeWrapper = styled.div`
   display: flex;
   flex-direction: column;
 `;
+
 export const CarouselItem = styled.div`
   position: relative;
   display: flex;
@@ -28,7 +29,9 @@ export const NewArrivalTitle = styled.h1`
   color: ${colors.darkGrey};
   margin-bottom: 8px;
 `;
+
 export const DrinksTitle = NewArrivalTitle;
+
 export const NutsTitle = NewArrivalTitle;
 
 export const ProductCardsWrapper = styled.div`
@@ -45,7 +48,7 @@ export const DrinksWrapper = styled.div`
   margin-bottom: 70px;
 `;
 
-export const NutstWrapper = styled.div`
+export const NutsWrapper = styled.div`
   margin-top: 50px;
   margin-bottom: 70px;
 `;
@@ -71,6 +74,7 @@ export const BrandsWrapper = styled.div`
   display: flex;
   flex-direction: column;
 `;
+
 export const Brands = styled.div`
   display: flex;
   justify-content: space-between;
@@ -86,13 +90,13 @@ export const PromotionsWrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 25px;
-`
+`;
 
 export const Promotions = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-`
+`;
 
 export const PromotionsTitle = NewArrivalTitle;
 

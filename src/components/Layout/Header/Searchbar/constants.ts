@@ -4,7 +4,7 @@ export const userToolTitles = {
   userInfo: 'userInfo',
   chartIcon: 'chartIcon',
   basketIcon: 'basketIcon',
-}
+};
 
 export const userTools = [
   {
@@ -31,4 +31,4 @@ export const userTools = [
     height: '35px',
     hasAmountProduct: true,
   },
-]
+];

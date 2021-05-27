@@ -27,6 +27,7 @@ export const IconWrapper = styled.div`
   ${({ marginLeft }) => `margin-left: ${marginLeft ?? '0'}`};
   position: relative;
 `;
+
 export const AmountProduct = styled.div`
   display: flex;
   align-items: center;
@@ -43,7 +44,7 @@ export const AmountProduct = styled.div`
   left: 23px;
 `;
 
-export const TotalPuchase = styled.div`
+export const TotalPurchase = styled.div`
   color: ${colors.green};
   margin-left: 5px;
   font-weight: bold;
