@@ -1,33 +1,15 @@
-import {
-  Action,
-  applyMiddleware,
-  combineReducers,
-  compose,
-  createStore,
-} from 'redux';
-import thunkMiddleware, { ThunkAction } from 'redux-thunk';
-import blogReducer from './reducers/blogReducer';
+import { configureStore } from '@reduxjs/toolkit';
+import blogSlice from './reducers/blogSlice';
 
-const rootReducer = combineReducers({
-  blogPage: blogReducer,
+const store = configureStore({
+  reducer: {
+    blogSlice: blogSlice,
+  },
 });
 
-const store = createStore(
-  rootReducer,
-  compose(applyMiddleware(thunkMiddleware)),
-);
+export type TypeRootState = ReturnType<typeof store.getState>;
 
-type TypeRootReducer = typeof rootReducer;
 export type TypeDispatch = typeof store.dispatch;
-export type TypeAppState = ReturnType<TypeRootReducer>;
-export type InferThunksType<
-  A extends Action = Action,
-  R = Promise<void>
-> = ThunkAction<R, TypeAppState, unknown, A>;
-export type InferActionsType<T> = T extends {
-  [key: string]: (...args: any) => infer U;
-}
-  ? U
-  : never;
+// export const useAppDispatch = () => useDispatch<TypeDispatch>();
 
 export default store;

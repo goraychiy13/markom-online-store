@@ -1,7 +1,7 @@
 import { TypeBlogData } from 'components/pages/Blog/types';
 import React, { memo, useState } from 'react';
-import { thunks } from '../../../redux/reducers/blogReducer';
-import { TypeDispatch } from '../../../redux/reduxStore';
+import { useDispatch } from 'react-redux';
+import { thunks } from '../../../redux/reducers/blogSlice';
 import Button from '../../uikit/Button/Button';
 import {
   currentButtonStyles,
@@ -15,10 +15,11 @@ type Props = {
   currentPage: number;
   totalCount: number;
   pageSize: number;
-  dispatch: TypeDispatch;
 };
 
 const Pagination: React.FC<Props> = (props) => {
+  const dispatch = useDispatch();
+
   const pagesCount = Math.ceil(props.totalCount / props.pageSize);
   const pages: number[] = [];
   for (let i = 1; i <= pagesCount; i++) pages.push(i);
@@ -29,9 +30,7 @@ const Pagination: React.FC<Props> = (props) => {
   function onPageChange(page: number): void {
     setLeftPortion(page - 1);
     setRightPortion(page + 1);
-    props.dispatch(
-      thunks.getArticlesList(page, props.pageSize, props.blogData),
-    );
+    dispatch(thunks.getArticlesList(page, props.pageSize, props.blogData));
   }
 
   return (
