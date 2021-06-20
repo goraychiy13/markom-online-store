@@ -8,6 +8,12 @@ export const StyledInputSearch = styled.form`
   width: 725px;
 `;
 
+export const inputSearchStyles = {
+  height: '35.22px',
+  padding: '0',
+  borderRadius: '5px 0 0 5px',
+};
+
 export const buttonStyles = {
   hasIcon: true,
   width: '50px',

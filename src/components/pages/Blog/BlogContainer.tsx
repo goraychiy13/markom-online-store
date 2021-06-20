@@ -1,17 +1,17 @@
-import React, { memo, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { thunks } from '../../../redux/reducers/blogReducer';
-import { TypeAppState } from '../../../redux/reduxStore';
+import { thunks } from '../../../redux/reducers/blogSlice';
+import { TypeRootState } from '../../../redux/reduxStore';
 import Blog from './Blog';
 
-const BlogContainer: React.FC = (props) => {
+const BlogContainer: React.FC = () => {
   const dispatch = useDispatch();
-  const blogState = useSelector((state: TypeAppState) => ({
-    blogData: state.blogPage.blogData,
-    articlesList: state.blogPage.articlesList,
-    currentPage: state.blogPage.currentPage,
-    totalCount: state.blogPage.totalCount,
-    pageSize: state.blogPage.pageSize,
+  const blogState = useSelector((state: TypeRootState) => ({
+    blogData: state.blogSlice.blogData,
+    articlesList: state.blogSlice.articlesList,
+    currentPage: state.blogSlice.currentPage,
+    totalCount: state.blogSlice.totalCount,
+    pageSize: state.blogSlice.pageSize,
   }));
 
   useEffect(() => {
@@ -25,9 +25,8 @@ const BlogContainer: React.FC = (props) => {
       currentPage={blogState.currentPage}
       totalCount={blogState.totalCount}
       pageSize={blogState.pageSize}
-      dispatch={dispatch}
     />
   );
 };
 
-export default memo(BlogContainer);
+export default BlogContainer;

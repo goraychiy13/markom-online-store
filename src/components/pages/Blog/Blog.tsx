@@ -1,7 +1,6 @@
 import { memo } from 'react';
 import { Link } from 'react-router-dom';
 import { Page, paths } from '../../../core/routes/constants';
-import { TypeDispatch } from '../../../redux/reduxStore';
 import Pagination from '../../modules/Pagination/Pagination';
 import Button from '../../uikit/Button';
 import Img from '../../uikit/Img/Img';
@@ -27,7 +26,6 @@ type Props = {
   currentPage: number;
   totalCount: number;
   pageSize: number;
-  dispatch: TypeDispatch;
 };
 
 const Blog: React.FC<Props> = (props) => {
@@ -48,7 +46,7 @@ const Blog: React.FC<Props> = (props) => {
           props.articlesList.map((article) => (
             <BlogArticle key={article.id} data-name="blog-article">
               <Link
-                to={paths[Page.BLOG] + '/' + article.id}
+                to={paths[Page.BLOG] + `/${article.id}`}
                 style={{ textDecoration: 'none' }}
               >
                 <Img
@@ -62,7 +60,7 @@ const Blog: React.FC<Props> = (props) => {
                   {article.date}
                 </ArticleDate>
                 <Link
-                  to={paths[Page.BLOG] + '/' + article.id}
+                  to={paths[Page.BLOG] + `/${article.id}`}
                   style={{ textDecoration: 'none' }}
                 >
                   <ArticleTitle data-name="article-title">
@@ -81,7 +79,6 @@ const Blog: React.FC<Props> = (props) => {
         currentPage={props.currentPage}
         totalCount={props.totalCount}
         pageSize={props.pageSize}
-        dispatch={props.dispatch}
       />
     </BlogWrapper>
   );

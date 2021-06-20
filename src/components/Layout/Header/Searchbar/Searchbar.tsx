@@ -25,11 +25,11 @@ function Searchbar(): JSX.Element {
   }
 
   function handeCompare(): void {
-    history.push();
+    // history.push();
   }
 
   function handeBasket(): void {
-    history.push();
+    // history.push();
   }
 
   function getUserToolMethod(toolTitle): () => void {
